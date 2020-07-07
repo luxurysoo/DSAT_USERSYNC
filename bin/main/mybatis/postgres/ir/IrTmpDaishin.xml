@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.innoinc.dao.postgres.ir.IrTmpDaishinMapper">
+
+    <select id="selectAll" resultType="ir_user_group">
+        SELECT *
+        FROM ir_user_group
+    </select>
+    
+    <insert id="insertGroup" parameterType="ir_user_group">
+	    INSERT INTO ir_user_group (
+	        group_id, group_path, group_depth, group_name, group_display_name
+	    )
+	    VALUES(
+	    	#{group_id}, #{group_path}, #{group_depth}, #{group_name}, #{group_display_name}
+	    )
+	</insert>
+    
+    <insert id="insertDaishinGroupList" parameterType="java.util.List">
+	    INSERT INTO tmp_daeshin (
+	        emp_no,  emp_name, dept_code, dept_name, upper_dept, upper_name, office_phone, title_code, compliance
+	    )
+	    VALUES
+		    <foreach collection="list" item="item" separator="," >
+		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.office_phone}','${item.title_code}','${item.compliance}')
+		    </foreach>
+	</insert>
+
+</mapper>
+
+

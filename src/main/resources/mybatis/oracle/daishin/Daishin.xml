@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.innoinc.dao.oracle.daishin.DaishinMapper">
+
+    <select id="selectAll" resultType="daishin">
+        SELECT *
+        FROM daeshin
+    </select>
+    
+    <select id="selectDaishinByCd" resultType="daishin">
+        SELECT *
+        FROM daeshin
+        WHERE dept_code  = #{deptcode}
+    </select>
+
+</mapper>

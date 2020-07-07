@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.innoinc.dao.postgres.ir.IrUserGroupMapper">
+
+    <select id="selectAll" resultType="ir_user_group">
+        SELECT *
+        FROM ir_user_group
+    </select>
+    
+    <insert id="insertGroup" parameterType="ir_user_group">
+	    INSERT INTO ir_user_group (
+	        group_id, group_path, group_depth, group_name, group_display_name
+	    )
+	    VALUES(
+	    	#{group_id}, #{group_path}, #{group_depth}, #{group_name}, #{group_display_name}
+	    )
+	</insert>
+    
+    <insert id="insertGroupList" parameterType="java.util.List">
+	    INSERT INTO ir_user_group (
+	        group_id, group_path, group_depth, group_name, group_display_name
+	    )
+	    VALUES
+		    <foreach collection="list" item="item" separator=" , " >
+		        ("${item.group_id}", "${item.group_path}", "${item.group_depth}", "${item.group_name}", "${item.group_display_name}")
+		    </foreach>
+	</insert>
+
+</mapper>
+
+
