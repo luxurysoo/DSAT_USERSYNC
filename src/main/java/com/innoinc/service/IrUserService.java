@@ -10,6 +10,7 @@ import java.util.List;
 
 import com.innoinc.dao.postgres.ir.IrUserMapper;
 import com.innoinc.model.postgres.ir.IrUser;
+import com.innoinc.model.postgres.ir.IrUserGroup;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,4 +35,10 @@ public class IrUserService {
 		IrUser iruser = irUserMapper.selectIruserByUserid(id);
 		return iruser;
 	}
+	
+	public void addUserList(List<IrUser> userList) {
+		irUserMapper.insertUserList(userList);
+	}
+	
+	
 }

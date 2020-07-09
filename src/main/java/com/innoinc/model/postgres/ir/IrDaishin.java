@@ -6,8 +6,8 @@ import org.apache.ibatis.type.Alias;
 import lombok.Data;
 
 @Data
-@Alias("daishin")
-public class Daishin {
+@Alias("ir_daishin")
+public class IrDaishin {
 	private String emp_no;
 	private String emp_name;
 	private String dept_code;
@@ -17,5 +17,7 @@ public class Daishin {
 	private String office_phone;
 	private String title_code;
 	private String compliance;
+	private String group_path;
+	private String group_id;
 	
 }

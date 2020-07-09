@@ -26,6 +26,20 @@ public class IrUserGroupService {
 	
 	public void addGroupList(List<IrUserGroup> groupList) {
 		irUserGroupMapper.insertGroupList(groupList);
-		
 	}
+	
+	public void removeIrUserGroup() {
+		irUserGroupMapper.deleteIrUserGroup();
+		
+	} 
+	 
+	public String selectGroupByCd(String deptcode) {
+		
+		String deptcd =  irUserGroupMapper.selectGroupByCd(deptcode);
+		
+		return deptcd;
+	}
+	
+	
+	 
 }

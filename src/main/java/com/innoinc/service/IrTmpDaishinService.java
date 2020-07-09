@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.innoinc.dao.postgres.ir.IrTmpDaishinMapper;
 import com.innoinc.dao.postgres.ir.IrUserGroupMapper;
 import com.innoinc.model.oracle.daishin.Daishin;
+import com.innoinc.model.postgres.ir.IrDaishin;
 import com.innoinc.model.postgres.ir.IrUserGroup;
 
 @Service
@@ -22,4 +23,25 @@ public class IrTmpDaishinService {
 		irTmpDaishinMapper.insertDaishinGroupList(daishinList);
 		
 	}
+
+	public void deleteTmpDaishin() {
+		irTmpDaishinMapper.deleteTmpDaishin();
+		
+	}
+	
+	
+	public List<IrDaishin> selectTmpViewGroup() {
+		List<IrDaishin> groupList = irTmpDaishinMapper.selectTmpViewGroup();
+		return groupList;
+	}
+	
+	public String getUpperDept(String deptcode) {
+		
+		String upperDept =  irTmpDaishinMapper.getUpperDept(deptcode);
+		
+		return upperDept;
+	}
+
+	
+ 
 }

@@ -18,23 +18,15 @@ import lombok.Data;
 @Alias("iruser")
 public class IrUser 
 {
-	private String user_id;
+	private String emp_no;
+	private String emp_name;
+	private String dept_code;
+	private String dept_name;
+	private String upper_dept;
+	private String upper_name;
+	private String office_phone;
+	private String title_code;
+	private String compliance;
 	
-	private String user_name;
-		
-	private String passwd;
-
-	private String group_path;
 	
-	private String auth_level;
-	
-	private Date reg_date;
-	
-	private Date last_call_time;
-	
-	private Date login_time;
-	
-	private Date logoff_time;
-
-	private String login_lock_reason;
 }

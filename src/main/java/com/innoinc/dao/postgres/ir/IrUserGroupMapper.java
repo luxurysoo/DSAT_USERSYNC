@@ -20,5 +20,8 @@ public interface IrUserGroupMapper {
 	void insertGroup(IrUserGroup irUserGroup);
 	
 	void insertGroupList(List<IrUserGroup> irUserGroupList);
-    
+	void deleteIrUserGroup();
+	public String selectGroupByCd(String deptcode);
+	
+	 
 }

@@ -11,6 +11,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Select;
 
 import com.innoinc.model.postgres.ir.IrUser;
+import com.innoinc.model.postgres.ir.IrUserGroup;
 
 
 
@@ -26,5 +27,8 @@ public interface IrUserMapper {
     IrUser selectIruserByUserid(String Userid);
 
     List<IrUser> selectIruserWhere();
+    
+    
+    void insertUserList(List<IrUser> irUserList);
     
 }
