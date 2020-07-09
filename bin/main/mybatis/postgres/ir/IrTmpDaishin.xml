@@ -9,6 +9,11 @@
         FROM ir_user_group
     </select>
     
+    <select id="selectTmpViewGroup" resultType="ir_daishin">
+        SELECT dept_code as dept_code, dept_name, upper_dept as upper_dept, upper_name 
+        FROM tmp_dsat_group_view
+    </select>
+    
     <insert id="insertGroup" parameterType="ir_user_group">
 	    INSERT INTO ir_user_group (
 	        group_id, group_path, group_depth, group_name, group_display_name
@@ -18,8 +23,12 @@
 	    )
 	</insert>
     
+    <delete id="deleteTmpDaishin" >
+    	DELETE from tmp_daishin;
+    </delete>
+    
     <insert id="insertDaishinGroupList" parameterType="java.util.List">
-	    INSERT INTO tmp_daeshin (
+	    INSERT INTO tmp_daishin (
 	        emp_no,  emp_name, dept_code, dept_name, upper_dept, upper_name, office_phone, title_code, compliance
 	    )
 	    VALUES
@@ -28,6 +37,20 @@
 		    </foreach>
 	</insert>
 
+
+ 	<select id="getUpperDept" parameterType="String" resultType="string">
+        SELECT distinct upper_dept
+        FROM tmp_daishin where dept_code=#{value}
+    </select>
+    
+    <select id="selectUserInfo" resultType="ir_daishin">
+        
+		select a.* , b.group_id, b.group_path from tmp_daishin a left join ir_user_group b on a.dept_code=b.dept_code;
+
+    </select>
+    
+    
+    
 </mapper>
 
 

@@ -9,12 +9,21 @@
         FROM ir_user_group
     </select>
     
+    <select id="selectGroupByCd" parameterType="String" resultType="string">
+        SELECT count(dept_code) as dept_code
+        FROM ir_user_group
+        WHERE  dept_code=#{value}
+    </select>
+    
+  
+    
+    
     <insert id="insertGroup" parameterType="ir_user_group">
 	    INSERT INTO ir_user_group (
-	        group_id, group_path, group_depth, group_name, group_display_name
+	        group_id, group_path, group_name, group_display_name, group_depth, group_parent_id, group_desc, dept_code, dept_name, upper_dept, upper_name
 	    )
 	    VALUES(
-	    	#{group_id}, #{group_path}, #{group_depth}, #{group_name}, #{group_display_name}
+	    	#{group_id}, #{group_path}, #{group_name}, #{group_display_name}, #{group_depth}, #{group_parent_id}, #{group_desc}, #{dept_code}, #{dept_name}, #{upper_dept}, #{upper_name}
 	    )
 	</insert>
     
@@ -27,7 +36,9 @@
 		        ("${item.group_id}", "${item.group_path}", "${item.group_depth}", "${item.group_name}", "${item.group_display_name}")
 		    </foreach>
 	</insert>
-
+	<delete id="deleteIrUserGroup" >
+    	DELETE from ir_user_group;
+    </delete>
 </mapper>
 
 

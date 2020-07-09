@@ -40,5 +40,9 @@ public class IrUserService {
 		irUserMapper.insertUserList(userList);
 	}
 	
-	
+	public void removeIrUser() {
+		irUserMapper.deleteIrUser();
+		
+	} 
+
 }

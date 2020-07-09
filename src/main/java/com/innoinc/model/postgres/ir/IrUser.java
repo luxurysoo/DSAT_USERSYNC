@@ -27,6 +27,11 @@ public class IrUser
 	private String office_phone;
 	private String title_code;
 	private String compliance;
+	private String group_path;
+	private String group_id;
+	private String user_id;
+	private String user_name;
+	private String retire_yn;
 	
 	
 }

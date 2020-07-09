@@ -31,4 +31,5 @@ public interface IrUserMapper {
     
     void insertUserList(List<IrUser> irUserList);
     
+    void deleteIrUser();
 }

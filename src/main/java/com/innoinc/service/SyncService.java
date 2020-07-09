@@ -28,6 +28,10 @@ public class SyncService {
 	   IrUserGroup irUserGroup;
 	   List<IrUserGroup> irUserGroupList;
 	   List<IrDaishin> dsGroupList;
+	   IrUser iruser;
+	   List<IrDaishin> irUserDSList;
+	   
+ 
 	   
 	   public void daeshinPrint() {
 		  	 daeshinList = daeshinservice.selectAll();
@@ -39,47 +43,13 @@ public class SyncService {
 	   }
 	   
 	   public void addUserGroup() {
-
-		  	 
-		  	 //irUserGroup = new IrUserGroup();
-		  	 //irUserGroup.setGroup_id("00");
-		  	 //irUserGroup.setGroup_depth(1);
-		  	 //irUserGroup.setGroup_name("蹂댁긽");
-		  	 //irUserGroup.setGroup_path("ROOT00");
-		  	 //irUserGroup.setGroup_display_name("蹂댁긽");
-		  	 
 		   	irTmpDaishinService.addGroupList(daeshinList);
-		  	 
-		   	 
-		  	// irUserGroupList = irUserGroupService.selectAll();
-		  	// irUserGroupList.forEach(i -> {
-		  	//	 System.out.println(i.toString());
-		  	// });
-		   	
-		   	
 	   }
 	   
 	   
 	   
 	   public void addUser() {
-
-		  	 
-		  	 //irUserGroup = new IrUserGroup();
-		  	 //irUserGroup.setGroup_id("00");
-		  	 //irUserGroup.setGroup_depth(1);
-		  	 //irUserGroup.setGroup_name("蹂댁긽");
-		  	 //irUserGroup.setGroup_path("ROOT00");
-		  	 //irUserGroup.setGroup_display_name("蹂댁긽");
-		  	 
 		   	irUserService.addUserList(irUserList);
-		  	 
-		   	 
-		  	// irUserGroupList = irUserGroupService.selectAll();
-		  	// irUserGroupList.forEach(i -> {
-		  	//	 System.out.println(i.toString());
-		  	// });
-		   	
-		   	
 	   }
 	   
 	   
@@ -88,7 +58,6 @@ public class SyncService {
 		   dsGroupList.forEach(dsGroupList -> {
 			  // System.out.println("tmpgroup :  " + dsGroupList.toString());
 		   });
-		  	 
 		//   System.out.println(IrTmpDaishinService.selectVersion());
 	   }
 	   
@@ -101,6 +70,9 @@ public class SyncService {
 		   irUserGroupService.removeIrUserGroup();
 	   }
 	   
+	   public void removeIrUser() {
+		   irUserService.removeIrUser();
+	   }
 	   
 	   
 	   public void insertUserGroup() {
@@ -118,8 +90,6 @@ public class SyncService {
 		   irUserGroup.setUpper_name("대신자산신탁");
 		   irUserGroup.setGroup_depth(0);
 		   irUserGroupService.addGroup(irUserGroup);
-		   
-		   
 		   dsGroupList.forEach(dsGroupList -> {
 			   String group_id = "";
 			   String group_name = "";
@@ -131,11 +101,7 @@ public class SyncService {
 			   String upper_name ="";
 			   int group_depth=0;
 			   String group_parent_id="";
-			   
-			 
-			    
-			   
-			   
+
 			   group_id= dsGroupList.getDept_code();
 			   group_name=dsGroupList.getDept_name();
 			   group_display_name= group_name;
@@ -145,9 +111,7 @@ public class SyncService {
 			   upper_name = dsGroupList.getUpper_name();
 			   group_parent_id =upper_dept.substring(1,5);
 			   group_id = group_id.substring(1,5);
-		 
-			   
-			   
+		 	   
 			   String strPath = "";
 			   String selectCode = dept_code;
 			//   System.out.println("		조회시작 selectCode : " + selectCode);
@@ -180,15 +144,9 @@ public class SyncService {
 						 //  System.out.println(" dept와 uppper가 동일함 패스 " + tmpcode + "/"+ selectCode);
 						   break;
 					   }
-					   
-					   
-					    
 				   }
-				   
-				   
-				    
 			   }  
-			   System.out.println("*** 					group_depth  : " + depth);
+		//	   System.out.println("*** 					group_depth  : " + depth);
 			   group_path="ROOT"+strPath +group_id;   
 			 
 			   
@@ -233,5 +191,8 @@ public class SyncService {
 		   
 	   }
 	   
-	   
+	   public void getUserList() { 
+		   irUserList = irTmpDaishinService.selectUserInfo();
+	   }
+ 
 }

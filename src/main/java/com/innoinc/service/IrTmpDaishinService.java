@@ -10,6 +10,7 @@ import com.innoinc.dao.postgres.ir.IrTmpDaishinMapper;
 import com.innoinc.dao.postgres.ir.IrUserGroupMapper;
 import com.innoinc.model.oracle.daishin.Daishin;
 import com.innoinc.model.postgres.ir.IrDaishin;
+import com.innoinc.model.postgres.ir.IrUser;
 import com.innoinc.model.postgres.ir.IrUserGroup;
 
 @Service
@@ -41,7 +42,12 @@ public class IrTmpDaishinService {
 		
 		return upperDept;
 	}
-
+	
+	public List<IrUser> selectUserInfo(){
+		List<IrUser> userList = irTmpDaishinMapper.selectUserInfo();
+		System.out.println("selectUserInfo : "+ userList.toString());
+		return userList;
+	}
 	
  
 }

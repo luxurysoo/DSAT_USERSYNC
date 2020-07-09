@@ -28,6 +28,18 @@ public class SyncRunner implements CommandLineRunner{
 	   syncService.removeIrUserGroup();
 	   // ir_user_group 초기데이터 넣기
 	   syncService.insertUserGroup();
+	   // ir_user 정보 가져오기
+	   syncService.getUserList();
+	   // ir_user 삭제하기
+	   syncService.removeIrUser();
+	   // ir_user 정보 insert 하기
+	   syncService.addUser();
+	   
+	   // 남은것들
+	   // 1. 전화번호는 어떻게 뒤에 4자리만??
+	   // 2. 패스워드는 어떻게 백업 후 업데이트??
+	   
+	   
 	}
 } 
 
