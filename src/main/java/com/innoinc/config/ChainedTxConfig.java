@@ -4,7 +4,7 @@
  * DatabaseConfig에 생성한 txmanger been을 묶는 ChainedTxConfig
  * 여러개의 DatabaseConfig가 각 txmanger been을 전부 추가해야 한다.
  *
- * @author 박민성
+ * @author  
  */
 
 package com.innoinc.config;

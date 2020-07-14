@@ -3,7 +3,7 @@
  * 
  * 테이블 속성을 매핑
  * 
- * @author 박민성
+ * @author  
  */
 
 package com.innoinc.model.postgres.ir;

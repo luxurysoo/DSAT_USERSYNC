@@ -6,7 +6,7 @@
  * 서브 DataConfig를 사용할 시 서브 dataconfig에서는 @Primary 어노테이션 제거
  * @Primary는 단 1개의 DB에서만 사용
  *
- * @author 박민성
+ * @author  
  */
 
 package com.innoinc.config;
