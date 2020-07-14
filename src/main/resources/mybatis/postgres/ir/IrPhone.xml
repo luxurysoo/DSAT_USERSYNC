@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.innoinc.dao.postgres.ir.IrPhoneMapper">
+
+    <select id="selectAll" resultType="ir_phone">
+        SELECT *
+        FROM ir_phone
+    </select>
+    
+ 
+
+  
+	<update id="updatePhoneBean" parameterType="ir_phone">
+		update ir_phone set group_path='${group_path}',user_group_path='${user_group_path}', user_group_name='${user_group_name}',user_id='${user_id}', user_name='${user_name}',
+				 user_state='${user_state}', phone_status='${phone_status}', last_modified=now() 
+		where phone_no='${phone_no}' 
+	</update>
+	 
+</mapper>
