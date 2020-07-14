@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.innoinc.model.oracle.daishin.Daishin;
 import com.innoinc.model.postgres.ir.IrDaishin;
+import com.innoinc.model.postgres.ir.IrPhone;
 import com.innoinc.model.postgres.ir.IrUser;
 import com.innoinc.model.postgres.ir.IrUserGroup;
 
@@ -21,6 +22,8 @@ public class SyncService {
 	   private IrUserGroupService irUserGroupService;
 	   @Autowired
 	   private IrTmpDaishinService irTmpDaishinService;
+	   @Autowired
+	   private IrPhoneService irPhoneService;
 	   
 	   List<Daishin> daeshinList;
 	   Daishin daishin;
@@ -30,8 +33,21 @@ public class SyncService {
 	   List<IrDaishin> dsGroupList;
 	   IrUser iruser;
 	   List<IrDaishin> irUserDSList;
+	   IrPhone ir_phone;
+	   // 퇴사자 그룹id.
+	   String retire_group_id="ZZZZ";
+	   // 퇴사자 그룹명.
+	   String retire_group_name="퇴사자"; 
+	   // 퇴사자 그룹패스.
+	   String retire_group_path="ROOTZZZZ"; 
 	   
- 
+	   // ROOT 그룹id.
+	   String root_group_id="SYST";
+	   // ROOT 그룹명.
+	   String root_group_name="대신자산신탁";	   
+	   // ROOT 그룹패스.
+	   String root_group_path="ROOT";
+	   
 	   
 	   public void daeshinPrint() {
 		  	 daeshinList = daeshinservice.selectAll();
@@ -49,8 +65,107 @@ public class SyncService {
 	   
 	   
 	   public void addUser() {
-		   	irUserService.addUserList(irUserList);
+		   // 여기서만 초기화 해준다. 
+		   IrPhone ir_phone = new IrPhone();
+		   
+		   
+		   irUserList.forEach(iruser -> {
+			   System.out.println("DDDDDDDDDDDDDDDDDD :"+iruser.toString());
+			   iruser.getEmp_no();
+			  // System.out.println(irUserList.getEmp_no());
+		//	   String user_id = irUserList.getEmp_no();
+		//	   iruser.setEmp_no(user_id); 
+			 //  System.out.println("USERID : " + iruser.getEmp_no());
+			   //iruser.setEmp_no(irUserList.getEmp_no());
+			   //System.out.println("user_id : " + iruser.getEmp_no());
+			   String phone_no = iruser.getOffice_phone();
+			   String group_path = iruser.getGroup_path();
+			   String user_id=iruser.getEmp_no();
+			   String user_name=iruser.getEmp_name();
+			   String user_group_name = iruser.getDept_name();
+			   System.out.println("retire_YN" +		iruser.getRetire_yn()		   );
+			   
+			   System.out.println("phone_no" +		phone_no		   );
+			   System.out.println("group_path" +	group_path		   );
+			   System.out.println("user_id" +		user_id		);
+			   System.out.println("user_name" +	user_name		);
+			   System.out.println("user_group_name" +  user_group_name   );
+			   
+			   System.out.println(ir_phone.toString()); 
+			   // ir_phone bean 에 데이터 설정
+			   
+			   ir_phone.setGroup_path(group_path);
+			   ir_phone.setUser_group_path(group_path);
+			   ir_phone.setUser_group_name(user_group_name);
+			   ir_phone.setUser_id(user_id);
+
+			   
+			   boolean bret_phone_no=false;
+			   int cnt = phone_no.length() ; 
+			   
+			   if (cnt >= 4 ) {
+				   	System.out.println("phonelastindex "+phone_no.substring(cnt-4,cnt) );
+				   	String tmpno = phone_no.substring(cnt-4,cnt);
+				   	iruser.setOffice_phone(tmpno);
+				   	ir_phone.setPhone_status(1);
+				   	bret_phone_no=true;
+				   	ir_phone.setPhone_no(tmpno);
+		   		} 
+			   
+			   String retire = iruser.getRetire_yn()	;
+			   System.out.println("retire  : "+retire);
+			   if (retire.equals("N") ) {
+				   ir_phone.setUser_state(1);
+			   }else {
+				   ir_phone.setUser_state(0);
+				   ir_phone.setUser_group_path(retire_group_path);
+				   iruser.setGroup_path(retire_group_path);
+				   iruser.setGroup_id(retire_group_id);
+			   }
+			   
+			   
+				   
+			   int dubchk = -1;
+			   dubchk=irUserService.selectUser(iruser.getEmp_no());
+			   
+			   if (dubchk ==1 ) {
+				   System.out.println("데이터 중복되어 update 처리 : "+iruser.getEmp_no());
+				   irUserService.updateUserBean(iruser);
+			   }else {
+				   System.out.println("데이터 insert 처리 : "+iruser.getEmp_no());
+				   irUserService.addUserBean(iruser );
+			   }
+			   
+			   // 폰정보 업데이트
+			   // group_path, user_id, user_status , user_name, user_group_path, user_login_time=now() , user_group_name, user_logoff_time ( 퇴직자로 변경되면 설정 ? ) , user_state= 1 update , 
+			   // 1039   1092
+			   // 1038   1061
+			   
+			   
+			   // update ir_phone set phone_no='1092' where phone_no='1039';
+			   // update ir_phone set phone_no='1061' where phone_no='1038';
+			   // update ir_phone set phone_no='1076' where phone_no='1995';
+			   // update ir_phone set phone_no='6261' where phone_no='1037';
+			   // 폰정보 업데이트  (내선번호가 있을때만 )
+			   
+			   if (bret_phone_no==true ) {
+				   System.out.println("폰정보 업데이트   : "+ bret_phone_no);
+				   System.out.println("폰정보 업데이트 phone_no   : "+ ir_phone.getPhone_no());
+				   System.out.println("폰정보 업데이트 User_status   : "+ ir_phone.getUser_state());
+ 
+				   irPhoneService.updatePhoneBean(ir_phone);
+			   }
+			   
+			   
+		   });
+		   	
 	   }
+	   
+	   public int selectUserById(String id) {
+		   	int cnt = irUserService.selectUser(id);
+		   	return cnt;
+	   }
+	   
 	   
 	   
 	   public void getTmpGroup() {
@@ -79,17 +194,31 @@ public class SyncService {
 		   irUserGroup = new IrUserGroup();
 		   
 		   // ROOT 대신자산신탁 수동입력.
-		   irUserGroup.setGroup_id("SYSY");
-		   irUserGroup.setGroup_name("대신자산신탁");
-		   irUserGroup.setGroup_path("ROOT");
-		   irUserGroup.setGroup_display_name("대신자산신탁");
-		   irUserGroup.setGroup_desc("대신자산신탁");
+		   irUserGroup.setGroup_id(root_group_id);
+		   irUserGroup.setGroup_name(root_group_name);
+		   irUserGroup.setGroup_path(root_group_path);
+		   irUserGroup.setGroup_display_name(root_group_name);
+		   irUserGroup.setGroup_desc(root_group_name);
 		   irUserGroup.setDept_code("00010");
-		   irUserGroup.setDept_name("대신자산신탁");
+		   irUserGroup.setDept_name(root_group_name);
 		   irUserGroup.setUpper_dept("");
-		   irUserGroup.setUpper_name("대신자산신탁");
+		   irUserGroup.setUpper_name(root_group_name);
 		   irUserGroup.setGroup_depth(0);
 		   irUserGroupService.addGroup(irUserGroup);
+		   // 퇴직자 그룹 생성
+		   irUserGroup.setGroup_id(retire_group_id);
+		   irUserGroup.setGroup_name(retire_group_name);
+		   irUserGroup.setGroup_path(retire_group_path);
+		   irUserGroup.setGroup_display_name(retire_group_name);
+		   irUserGroup.setGroup_desc(retire_group_name);
+		   irUserGroup.setDept_code("");
+		   irUserGroup.setDept_name(retire_group_name);
+		   irUserGroup.setUpper_dept("");
+		   irUserGroup.setUpper_name(root_group_name);
+		   irUserGroup.setGroup_depth(1);
+		   irUserGroupService.addGroup(irUserGroup);
+		   
+		   
 		   dsGroupList.forEach(dsGroupList -> {
 			   String group_id = "";
 			   String group_name = "";
@@ -179,6 +308,8 @@ public class SyncService {
 			   irUserGroup.setGroup_parent_id(group_parent_id);
 			   // insert ir_user_group
 			   //if(!dept_code.equals(upper_dept)) {
+			   // user입력 위하여 리스트 생성
+			   
 			   
 			   //System.out.println( "%#$@% dept_code : " +  dept_code );
 			   String code = irUserGroupService.selectGroupByCd(dept_code);
@@ -193,6 +324,10 @@ public class SyncService {
 	   
 	   public void getUserList() { 
 		   irUserList = irTmpDaishinService.selectUserInfo();
+		   
+		   //System.out.println("DREFEFEFEF : "+irUserList);
 	   }
- 
+	   public void getIrUserList() {
+		//   irUserList = .selectUserInfo();
+	   }
 }

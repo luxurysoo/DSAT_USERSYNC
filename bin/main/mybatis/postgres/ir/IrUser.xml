@@ -9,8 +9,8 @@
         FROM ir_user
     </select>
     
-    <select id="selectIruserByUserid" resultType="iruser">
-        SELECT *
+    <select id="selectIruserByUserid" parameterType="String" resultType="int">
+        SELECT count(user_id) as count
         FROM ir_user
         WHERE user_id = #{userid}
     </select>
@@ -27,6 +27,22 @@
 		    </foreach>
 	</insert>
 	
+	<insert id="insertUserBean" parameterType="iruser" >
+		INSERT INTO ir_user (
+	        user_id,  user_name, dept_code, dept_name, upper_dept, upper_name,group_path, group_id,
+	         phone_no, title_code, compliance, retire_yn, passwd, auth_level
+	    )
+	    VALUES 
+		 ('${emp_no}','${emp_name}', '${dept_code}', '${dept_name}', '${upper_dept}','${upper_name}','${group_path}','${group_id}',
+		        '${office_phone}','${title_code}','${compliance}','${retire_yn}', '1!2@3#' ,0   )
+	</insert>
+	
+	<update id="updateUserBean" parameterType="iruser">
+		update ir_user set dept_code='${dept_code}', dept_name='${dept_name}', upper_dept='${upper_dept}', upper_name='${upper_name}',
+				group_path='${group_path}',group_id='${group_id}' ,phone_no='${office_phone}',title_code='${title_code}',
+				compliance='${compliance}', retire_yn='${retire_yn}', passwd='${passwd}', auth_level='${auth_level}' , user_name='${emp_name}'
+		where user_id='${emp_no }' 
+	</update>
 	
 	<delete id="deleteIrUser" >
     	DELETE from ir_user

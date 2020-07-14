@@ -24,12 +24,16 @@ public interface IrUserMapper {
 	
     List<IrUser> selectAll();
     
-    IrUser selectIruserByUserid(String Userid);
+    int selectIruserByUserid(String Userid);
 
     List<IrUser> selectIruserWhere();
     
+    void insertUserBean(IrUser iruser);
+    
+    void updateUserBean(IrUser iruser);
     
     void insertUserList(List<IrUser> irUserList);
     
     void deleteIrUser();
 }
+

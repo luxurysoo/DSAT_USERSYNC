@@ -29,11 +29,11 @@
     
     <insert id="insertDaishinGroupList" parameterType="java.util.List">
 	    INSERT INTO tmp_daishin (
-	        emp_no,  emp_name, dept_code, dept_name, upper_dept, upper_name, office_phone, title_code, compliance
+	        emp_no,  emp_name, dept_code, dept_name, upper_dept, upper_name, office_phone, title_code, compliance, retire_yn
 	    )
 	    VALUES
 		    <foreach collection="list" item="item" separator="," >
-		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.office_phone}','${item.title_code}','${item.compliance}')
+		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.office_phone}','${item.title_code}','${item.compliance}', '${item.retire_yn}')
 		    </foreach>
 	</insert>
 
@@ -43,7 +43,7 @@
         FROM tmp_daishin where dept_code=#{value}
     </select>
     
-    <select id="selectUserInfo" resultType="ir_daishin">
+    <select id="selectUserInfo" resultType="iruser">
         
 		select a.* , b.group_id, b.group_path from tmp_daishin a left join ir_user_group b on a.dept_code=b.dept_code;
 

@@ -31,14 +31,25 @@ public class IrUserService {
 		return iruserList;
 	}
 	
-	public IrUser selectIruserByUserid(String id) {
-		IrUser iruser = irUserMapper.selectIruserByUserid(id);
-		return iruser;
+	public int selectUser(String id) {
+		int cnt = -1;
+		cnt = irUserMapper.selectIruserByUserid(id);
+		return cnt;
 	}
 	
 	public void addUserList(List<IrUser> userList) {
 		irUserMapper.insertUserList(userList);
 	}
+	// bean 으로 처리
+	public void addUserBean(IrUser irUser ) {
+		irUserMapper.insertUserBean(irUser);
+	}
+	
+	// bean 으로 처리
+	public void updateUserBean(IrUser irUser ) {
+		irUserMapper.updateUserBean(irUser);
+	}
+	
 	
 	public void removeIrUser() {
 		irUserMapper.deleteIrUser();

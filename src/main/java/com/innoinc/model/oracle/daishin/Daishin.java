@@ -17,5 +17,5 @@ public class Daishin {
 	private String office_phone;
 	private String title_code;
 	private String compliance;
-	
+	private String retire_yn;
 }

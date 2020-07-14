@@ -23,4 +23,6 @@ public class IrDaishin {
 	private String user_name;
 	private String retire_yn;
 	
+	private String passwd;
+	private int auth_level;
 }
