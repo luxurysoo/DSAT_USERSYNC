@@ -18,12 +18,12 @@
 	 <insert id="insertUserList" parameterType="java.util.List">
 	    INSERT INTO ir_user (
 	        user_id,  user_name, dept_code, dept_name, upper_dept, upper_name,group_path, group_id,
-	         phone_no, title_code, compliance, retire_yn, passwd,auth_level
+	         phone_no, title_code, compliance, retire_yn, passwd, auth_level
 	    )
 	    VALUES
 		    <foreach collection="list" item="item" separator="," >
 		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.group_path}','${item.group_id}',
-		        '${item.office_phone}','${item.title_code}','${item.compliance}','${item.retire_yn}', '1!2@3#' ,0   )
+		        '${item.office_phone}','${item.title_code}','${item.compliance}','${item.retire_yn}', '${item.passwd}' ,0   )
 		    </foreach>
 	</insert>
 	
@@ -34,7 +34,7 @@
 	    )
 	    VALUES 
 		 ('${emp_no}','${emp_name}', '${dept_code}', '${dept_name}', '${upper_dept}','${upper_name}','${group_path}','${group_id}',
-		        '${office_phone}','${title_code}','${compliance}','${retire_yn}', '1!2@3#' ,0   )
+		        '${office_phone}','${title_code}','${compliance}','${retire_yn}', '${passwd}' ,0   )
 	</insert>
 	
 	<update id="updateUserBean" parameterType="iruser">

@@ -6,12 +6,12 @@
 
     <select id="selectAll" resultType="daishin">
         SELECT *
-        FROM daeshin
+        FROM vw_HR_PERS_MASTER_REC
     </select>
     
     <select id="selectDaishinByCd" resultType="daishin">
         SELECT *
-        FROM daeshin
+        FROM vw_HR_PERS_MASTER_REC
         WHERE dept_code  = #{deptcode}
     </select>
 

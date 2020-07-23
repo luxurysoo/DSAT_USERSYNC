@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.innoinc.dao.postgres.ir.IrUserAuthInfoMapper">
+
+  
+    <select id="selectIruserAuthByUserid" parameterType="String" resultType="int">
+        SELECT count(user_id) as count
+        FROM ir_user_auth_info
+        WHERE user_id = #{user_id}
+    </select>
+    
+    
+  	<insert id="insertUserAuthInfoBean" parameterType="ir_user_auth_info" >
+		INSERT INTO ir_user_auth_info (
+	        user_id,  group_path, job_auth_code 
+	    )
+	    VALUES 
+		 ('${user_id}','${group_path}', '${job_auth_code}'  )
+	</insert>
+	
+	<update id="updateUserAuthInfoBean" parameterType="ir_user_auth_info">
+		update ir_user_auth_info set group_path='${group_path}', job_auth_code='${job_auth_code}' 
+		where user_id='${user_id }' 
+	</update>
+ 
+</mapper>
+
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOGS_ABSOLUTE_PATH" value="./logs"/>
+    <property name="FILE_NAME" value="usersync"/>
+
+
+    <!-- 콘솔 로그 -->
+    <appender name="DEFAULT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <!-- 로그 패턴 설정 -->
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{100} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 파일 생성 로그 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS_ABSOLUTE_PATH}/${FILE_NAME}.log</file>
+        <!-- 일자별 로그파일 저장 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS_ABSOLUTE_PATH}/${FILE_NAME}_%d{yyyyMMdd}.log</fileNamePattern>
+            <!-- 일자별 로그파일 저장 기간 설정 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 파일 생성 로그 -->
+    <appender name="DEBUGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS_ABSOLUTE_PATH}/${FILE_NAME}_debug.log</file>
+        <!-- 일자별 로그파일 저장 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS_ABSOLUTE_PATH}/${FILE_NAME}_debug_%d{yyyyMMdd}.log</fileNamePattern>
+            <!-- 일자별 로그파일 저장 기간 설정 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{100} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 파일 생성 로그 -->
+    <appender name="ERRORFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS_ABSOLUTE_PATH}/${FILE_NAME}_error.log</file>
+        <!-- 일자별 로그파일 저장 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS_ABSOLUTE_PATH}/${FILE_NAME}_error_%d{yyyyMMdd}.log</fileNamePattern>
+            <!-- 일자별 로그파일 저장 기간 설정 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="com.innoinc" level="DEBUG">
+        <appender-ref ref="DEBUGFILE"/>
+        <appender-ref ref="ERRORFILE"/>
+        <appender-ref ref="FILE"/>
+        <!--         <appender-ref ref="FILE" /> -->
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="DEFAULT"/>
+
+    </root>
+
+
+</configuration>

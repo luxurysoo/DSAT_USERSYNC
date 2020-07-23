@@ -2,7 +2,10 @@ package com.innoinc.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +13,7 @@ import com.innoinc.model.oracle.daishin.Daishin;
 import com.innoinc.model.postgres.ir.IrDaishin;
 import com.innoinc.model.postgres.ir.IrPhone;
 import com.innoinc.model.postgres.ir.IrUser;
+import com.innoinc.model.postgres.ir.IrUserAuthInfo;
 import com.innoinc.model.postgres.ir.IrUserGroup;
 
 @Service
@@ -24,6 +28,14 @@ public class SyncService {
 	   private IrTmpDaishinService irTmpDaishinService;
 	   @Autowired
 	   private IrPhoneService irPhoneService;
+	   @Autowired
+	   private IrUserAuthInfoService irUserAuthInfoService;
+	   @Value("${init_password}") 
+	   private String init_password;
+	   
+	   private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+	   
 	   
 	   List<Daishin> daeshinList;
 	   Daishin daishin;
@@ -34,6 +46,9 @@ public class SyncService {
 	   IrUser iruser;
 	   List<IrDaishin> irUserDSList;
 	   IrPhone ir_phone;
+	   IrUserAuthInfo ir_user_auth_info;
+	   
+	   
 	   // 퇴사자 그룹id.
 	   String retire_group_id="ZZZZ";
 	   // 퇴사자 그룹명.
@@ -50,28 +65,37 @@ public class SyncService {
 	   
 	   
 	   public void daeshinPrint() {
-		  	 daeshinList = daeshinservice.selectAll();
+		   try {
+			   daeshinList = daeshinservice.selectAll();
 		  	// daeshinList.forEach(daishin -> {
 		  	//	 System.out.println(daishin.toString());
 		  	// });
-		  	 
+			   logger.info("oracle 에서 정보 가져오기 " );
 		  //	 System.out.println(irUserService.selectVersion());
+		   }catch (Exception e ) {
+			   logger.error("oracle 에서 정보 가져오기 오류 " + e.getMessage() );
+		   }
 	   }
 	   
 	   public void addUserGroup() {
-		   	irTmpDaishinService.addGroupList(daeshinList);
+		   try {
+			   irTmpDaishinService.addGroupList(daeshinList);
+			   logger.info("tmp_daishin 테이블에 데이터 입력 (postgres) " );
+		   }catch (Exception e ) {
+			   logger.error("tmp_daishin 테이블에 데이터 입력 (postgres) 오류 " + e.getMessage() );
+		   }
 	   }
 	   
 	   
 	   
 	   public void addUser() {
 		   // 여기서만 초기화 해준다. 
+		   logger.info("user 정보 입력  " );
 		   IrPhone ir_phone = new IrPhone();
-		   
+		   IrUserAuthInfo ir_user_auth_info = new IrUserAuthInfo();
 		   
 		   irUserList.forEach(iruser -> {
-			   System.out.println("DDDDDDDDDDDDDDDDDD :"+iruser.toString());
-			   iruser.getEmp_no();
+			   //System.out.println("DDDDDDDDDDDDDDDDDD :"+iruser.toString());
 			  // System.out.println(irUserList.getEmp_no());
 		//	   String user_id = irUserList.getEmp_no();
 		//	   iruser.setEmp_no(user_id); 
@@ -83,6 +107,12 @@ public class SyncService {
 			   String user_id=iruser.getEmp_no();
 			   String user_name=iruser.getEmp_name();
 			   String user_group_name = iruser.getDept_name();
+			   // 부서장 여부  Y/N
+			   String title_code = iruser.getTitle_code();
+			   // complience 여부 Y/N
+			   String compliance = iruser.getCompliance();
+			   System.out.println("compliance : " +		user_id + "/ " +iruser.getCompliance()		   );
+			  /* 
 			   System.out.println("retire_YN" +		iruser.getRetire_yn()		   );
 			   
 			   System.out.println("phone_no" +		phone_no		   );
@@ -91,14 +121,33 @@ public class SyncService {
 			   System.out.println("user_name" +	user_name		);
 			   System.out.println("user_group_name" +  user_group_name   );
 			   
-			   System.out.println(ir_phone.toString()); 
+			   System.out.println(ir_phone.toString());
+			   */ 
 			   // ir_phone bean 에 데이터 설정
-			   
 			   ir_phone.setGroup_path(group_path);
 			   ir_phone.setUser_group_path(group_path);
 			   ir_phone.setUser_group_name(user_group_name);
 			   ir_phone.setUser_id(user_id);
 
+			   
+			   // ir_user_auth_info  에 데이터 설정
+			   
+			   ir_user_auth_info.setUser_id(user_id);
+			   int  tmp_auth_code = 0;
+			   
+			   if (title_code.equals("Y")) {
+				   tmp_auth_code=11;
+				   iruser.setAuth_level(7);
+			   }
+			   
+			   if (compliance.equals("Y") ) {
+				   iruser.setAuth_level(9);
+			   }
+			   
+			   ir_user_auth_info.setJob_auth_code(tmp_auth_code);
+			   ir_user_auth_info.setGroup_path(group_path);
+			   // ir_user_auth_info 데이터 설정 끝
+			   
 			   
 			   boolean bret_phone_no=false;
 			   int cnt = phone_no.length() ; 
@@ -115,8 +164,11 @@ public class SyncService {
 			   String retire = iruser.getRetire_yn()	;
 			   System.out.println("retire  : "+retire);
 			   if (retire.equals("N") ) {
+				   // 퇴직자 state 1 처리
 				   ir_phone.setUser_state(1);
 			   }else {
+				   // 퇴직그룹으로 변경 
+				    
 				   ir_phone.setUser_state(0);
 				   ir_phone.setUser_group_path(retire_group_path);
 				   iruser.setGroup_path(retire_group_path);
@@ -128,13 +180,50 @@ public class SyncService {
 			   int dubchk = -1;
 			   dubchk=irUserService.selectUser(iruser.getEmp_no());
 			   
+			   
+
+			   			   
 			   if (dubchk ==1 ) {
-				   System.out.println("데이터 중복되어 update 처리 : "+iruser.getEmp_no());
-				   irUserService.updateUserBean(iruser);
+				   try {
+					   logger.debug("데이터 중복되어 update 처리 : " +iruser.getEmp_no());
+					  // System.out.println("데이터 중복되어 update 처리 : "+iruser.getEmp_no());
+					   irUserService.updateUserBean(iruser);
+					   logger.debug("데이터 중복되어 update 처리 : "+ir_user_auth_info.getUser_id());
+				   }catch (Exception e ) {
+					   logger.error("데이터 중복되어 update 처리오류  : "+ir_user_auth_info.getUser_id() +  " / " + e.getMessage());
+				   }
+				   
 			   }else {
-				   System.out.println("데이터 insert 처리 : "+iruser.getEmp_no());
-				   irUserService.addUserBean(iruser );
+				   try {
+					   logger.debug("데이터 insert 처리 : " +iruser.getEmp_no() );
+					   logger.debug("패스워드 초기화 처리함 : " + init_password );
+					   //System.out.println("데이터 insert 처리 : "+iruser.getEmp_no());
+					   // 신규등록시는 초기화 패스워드 처리함. 업데이트시에는 password 수정안함.
+					   iruser.setPasswd(init_password);
+					   irUserService.addUserBean(iruser );
+				   }catch (Exception e ) {
+					   logger.debug("데이터 insert 처리 오류 : " +iruser.getEmp_no() + " / " + e.getMessage() );
+				   }
 			   }
+			   
+			   // user_auth_info 정보 입력 또는 업데이트 
+			   
+			   //조회먼저한다.
+			   int dubchk2 = -1;
+			   System.out.println("ir_user_auth_info.getUser_id() " + ir_user_auth_info.getUser_id());
+			   
+			   dubchk2 = irUserAuthInfoService.selectUserAuth(ir_user_auth_info.getUser_id());
+			   if (dubchk2 ==1 ) {
+				//   System.out.println("ir_user_auth_info 데이터 중복되어 update 처리 : "+ir_user_auth_info.getUser_id());
+				   logger.debug("ir_user_auth_info 데이터 중복되어 update 처리 : "+ir_user_auth_info.getUser_id());
+				   irUserAuthInfoService.updateUserAuthBean(ir_user_auth_info);
+			   }else {
+				   logger.debug("ir_user_auth_info 데이터 insert 처리 : "+iruser.getEmp_no());
+				 //  System.out.println("ir_user_auth_info 데이터 insert 처리 : "+iruser.getEmp_no());
+				   irUserAuthInfoService.addUserAuthBean(ir_user_auth_info );
+			   }
+			   
+			  // System.out.println("init_password  : "+init_password);
 			   
 			   // 폰정보 업데이트
 			   // group_path, user_id, user_status , user_name, user_group_path, user_login_time=now() , user_group_name, user_logoff_time ( 퇴직자로 변경되면 설정 ? ) , user_state= 1 update , 
@@ -149,40 +238,65 @@ public class SyncService {
 			   // 폰정보 업데이트  (내선번호가 있을때만 )
 			   
 			   if (bret_phone_no==true ) {
+				   /*
 				   System.out.println("폰정보 업데이트   : "+ bret_phone_no);
 				   System.out.println("폰정보 업데이트 phone_no   : "+ ir_phone.getPhone_no());
 				   System.out.println("폰정보 업데이트 User_status   : "+ ir_phone.getUser_state());
- 
+			    	*/
 				   irPhoneService.updatePhoneBean(ir_phone);
 			   }
 			   
 			   
 		   });
-		   	
+		   logger.info("폰정보 업데이트  " );	
 	   }
 	   
-	   public int selectUserById(String id) {
-		   	int cnt = irUserService.selectUser(id);
-		   	return cnt;
+	   @SuppressWarnings("finally")
+	public int selectUserById(String id) {
+		   int cnt = -1;
+		   try {
+			   cnt=irUserService.selectUser(id);
+			
+			   logger.info("ir_user 조회   " + id  );
+			   
+		   }catch (Exception e ) {
+			   logger.error("ir_user 조회   " + id  );
+		   }finally {
+			   return cnt;
+		   }
+		   
 	   }
 	   
 	   
 	   
 	   public void getTmpGroup() {
-		   dsGroupList = irTmpDaishinService.selectTmpViewGroup();
-		   dsGroupList.forEach(dsGroupList -> {
-			  // System.out.println("tmpgroup :  " + dsGroupList.toString());
-		   });
-		//   System.out.println(IrTmpDaishinService.selectVersion());
+		   
+		   try {
+			   dsGroupList = irTmpDaishinService.selectTmpViewGroup();
+			   dsGroupList.forEach(dsGroupList -> {
+				  // System.out.println("tmpgroup :  " + dsGroupList.toString());
+			   });
+			//   System.out.println(IrTmpDaishinService.selectVersion());
+			   logger.info("tmp_daishin의 데이터로 그룹정보 조회 (view table)" );
+		   }catch (Exception e ) {
+			   logger.error("tmp_daishin의 데이터로 그룹정보 조회 (view table)" + e.getMessage() );
+		   }
 	   }
 	   
 	   public void removeTmpDaishin() {
-		   irTmpDaishinService.deleteTmpDaishin();
+		   try {
+			   irTmpDaishinService.deleteTmpDaishin();
+			   logger.info("tmp_daishin 테이블 삭제 " );
+		   }catch (Exception e ) {
+			   logger.error("tmp_daishin 테이블 삭제 " + e.getMessage());
+		   }
 	   }
 	   
 	   
 	   public void removeIrUserGroup() {
 		   irUserGroupService.removeIrUserGroup();
+		   logger.info("ir_user_group 삭제 " );
+		   
 	   }
 	   
 	   public void removeIrUser() {
@@ -193,6 +307,7 @@ public class SyncService {
 	   public void insertUserGroup() {
 		   irUserGroup = new IrUserGroup();
 		   
+		   try {
 		   // ROOT 대신자산신탁 수동입력.
 		   irUserGroup.setGroup_id(root_group_id);
 		   irUserGroup.setGroup_name(root_group_name);
@@ -318,16 +433,39 @@ public class SyncService {
 				   irUserGroupService.addGroup(irUserGroup);
 			   }
 			   //}
+			   
 		   });
-		   
+		   logger.info("ir_user_group 입력  " );
+		   }catch (Exception e ) {
+			   logger.info("ir_user_group 입력 오류 " + e.getMessage() );
+		   }
 	   }
 	   
+	   // ir_user_auth_info 조회. 부서장 정보 업데이트 처리 .
+	   @SuppressWarnings("finally")
+	public int getUserAuthInfo(String id) {
+		   int cnt = -1;
+	   
+		   try {
+			   cnt = irUserAuthInfoService.selectUserAuth(id);
+			   logger.info("ir_user 정보 입력 " );
+		   }catch (Exception e ) {
+			   logger.info("ir_user 정보 입력오류 " + e.getMessage() );
+		   }finally {
+			   return cnt;
+		   }
+	   }
+	   
+	   
+	   
 	   public void getUserList() { 
-		   irUserList = irTmpDaishinService.selectUserInfo();
-		   
+		   try {
+			   irUserList = irTmpDaishinService.selectUserInfo();
+			   logger.info("ir_user 정보 입력 " );
+		   }catch (Exception e ) {
 		   //System.out.println("DREFEFEFEF : "+irUserList);
+			   logger.error("ir_user 정보 입력 " + e.getMessage());
+		   }
 	   }
-	   public void getIrUserList() {
-		//   irUserList = .selectUserInfo();
-	   }
+	  
 }
