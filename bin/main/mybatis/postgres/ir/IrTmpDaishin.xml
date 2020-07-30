@@ -45,7 +45,7 @@
     
     <select id="selectUserInfo" resultType="iruser">
         
-		select a.* , b.group_id, b.group_path from tmp_daishin a left join ir_user_group b on a.dept_code=b.dept_code;
+		select a.* , b.group_id, b.group_path from tmp_daishin a left join ir_user_group b on a.dept_code=b.dept_code order by retire_yn desc;
 
     </select>
     

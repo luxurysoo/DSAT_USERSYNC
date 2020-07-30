@@ -128,7 +128,7 @@ public class SyncService {
 			   ir_phone.setUser_group_path(group_path);
 			   ir_phone.setUser_group_name(user_group_name);
 			   ir_phone.setUser_id(user_id);
-
+			   ir_phone.setUser_name(user_name);
 			   
 			   // ir_user_auth_info  에 데이터 설정
 			   
@@ -138,6 +138,7 @@ public class SyncService {
 			   if (title_code.equals("Y")) {
 				   tmp_auth_code=11;
 				   iruser.setAuth_level(7);
+				   
 			   }
 			   
 			   if (compliance.equals("Y") ) {
@@ -166,13 +167,20 @@ public class SyncService {
 			   if (retire.equals("N") ) {
 				   // 퇴직자 state 1 처리
 				   ir_phone.setUser_state(1);
+				   ir_phone.setUser_status(1);
 			   }else {
 				   // 퇴직그룹으로 변경 
-				    
-				   ir_phone.setUser_state(0);
-				   ir_phone.setUser_group_path(retire_group_path);
+				   ir_phone.setUser_id("");
+				   ir_phone.setUser_group_name(root_group_name);	// x퇴직자 추가처리
+				   ir_phone.setGroup_path(root_group_path);			// x퇴직자 추가처리
+				   ir_phone.setUser_group_name(root_group_name);	// x퇴직자 추가처리
+				   ir_phone.setUser_name("");						// x퇴직자 추가처리
+				   ir_phone.setUser_state(0);		
+				   ir_phone.setUser_group_path(root_group_path);	// 퇴직자는 루트그룹으로 변경
+				   ir_phone.setGroup_path(root_group_path);			// 퇴직자는 루트그룹으로 변경	
 				   iruser.setGroup_path(retire_group_path);
 				   iruser.setGroup_id(retire_group_id);
+				   ir_phone.setUser_status(0);
 			   }
 			   
 			   
@@ -326,7 +334,7 @@ public class SyncService {
 		   irUserGroup.setGroup_path(retire_group_path);
 		   irUserGroup.setGroup_display_name(retire_group_name);
 		   irUserGroup.setGroup_desc(retire_group_name);
-		   irUserGroup.setDept_code("");
+		   irUserGroup.setUpper_dept("SYST");		// "" -> SYST로 변경 20200730
 		   irUserGroup.setDept_name(retire_group_name);
 		   irUserGroup.setUpper_dept("");
 		   irUserGroup.setUpper_name(root_group_name);

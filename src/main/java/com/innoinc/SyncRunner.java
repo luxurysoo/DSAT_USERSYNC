@@ -48,7 +48,9 @@ public class SyncRunner implements CommandLineRunner{
 	   //    부서장들은 아래 내용이 입력 되어야 한다.
 	   //	 insert into ir_user_auth_info values('team','ROOT205E','11',0,now(), '2030-01-01');
 	   // 7. 컴플라이언스 처리 필요 ??  auth_level =9 ??
-	  
+	   // 8. 채널 매핑시 퇴직자를 order by desc 로 조회하여 정보 업데이트를 진행하도록 설정함.
+	   //    -> 김래수가 사번이 111 , 222  N 개이상 생길수 있음.그래서 위와같이 처리함.
+	   
 	}
 } 
 

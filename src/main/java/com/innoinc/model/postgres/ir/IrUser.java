@@ -34,5 +34,7 @@ public class IrUser
 	private String retire_yn;
 	private String passwd;
 	private int auth_level;
+	private String last_name;
+	private String first_name;
 	
 }

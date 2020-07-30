@@ -30,5 +30,6 @@ public class IrPhone
 	private String user_group_path;
 	private String user_group_name;
 	private int phone_status;
+	private int user_status;		//20200730 추가
 
 }
