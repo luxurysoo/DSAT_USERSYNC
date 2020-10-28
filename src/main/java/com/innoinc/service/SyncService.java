@@ -15,6 +15,10 @@ import com.innoinc.model.postgres.ir.IrPhone;
 import com.innoinc.model.postgres.ir.IrUser;
 import com.innoinc.model.postgres.ir.IrUserAuthInfo;
 import com.innoinc.model.postgres.ir.IrUserGroup;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Random;
+
 
 @Service
 public class SyncService {
@@ -157,7 +161,7 @@ public class SyncService {
 				   	System.out.println("phonelastindex "+phone_no.substring(cnt-4,cnt) );
 				   	String tmpno = phone_no.substring(cnt-4,cnt);
 				   	iruser.setOffice_phone(tmpno);
-				   	ir_phone.setPhone_status(1);
+				   	ir_phone.setPhone_status(0);	//20200806 phone_status 0으로 수정함 1은 채널장애
 				   	bret_phone_no=true;
 				   	ir_phone.setPhone_no(tmpno);
 		   		} 
@@ -183,8 +187,24 @@ public class SyncService {
 				   ir_phone.setUser_status(0);
 			   }
 			   
+			   // 패스워드 연동 추가 20201026
+			   String user_pass_sso = iruser.getUser_pass_sso();
+			   iruser.setPasswd(user_pass_sso);
+			   // 패스워드 연동 추가 20201026
 			   
-				   
+			   // last name / first name 추가 20201026
+			   String nm_last ="";
+			   String nm_first = "";
+			   if (user_name.length()>=2) {
+			   nm_last = user_name.substring(0,1);
+			   nm_first = user_name.substring(1,user_name.length());
+			   
+			   logger.info("last name : " + nm_last );
+			   logger.info("first name : " + nm_first );
+			   
+			   }
+			   iruser.setLast_name(nm_last);
+			   iruser.setFirst_name(nm_first);
 			   int dubchk = -1;
 			   dubchk=irUserService.selectUser(iruser.getEmp_no());
 			   
@@ -194,6 +214,7 @@ public class SyncService {
 			   if (dubchk ==1 ) {
 				   try {
 					   logger.debug("데이터 중복되어 update 처리 : " +iruser.getEmp_no());
+					   logger.debug("update 패스워드 : " +iruser.getUser_pass_sso());
 					  // System.out.println("데이터 중복되어 update 처리 : "+iruser.getEmp_no());
 					   irUserService.updateUserBean(iruser);
 					   logger.debug("데이터 중복되어 update 처리 : "+ir_user_auth_info.getUser_id());
@@ -204,10 +225,15 @@ public class SyncService {
 			   }else {
 				   try {
 					   logger.debug("데이터 insert 처리 : " +iruser.getEmp_no() );
-					   logger.debug("패스워드 초기화 처리함 : " + init_password );
+					   //logger.debug("패스워드 초기화 처리함 : " + init_password );
 					   //System.out.println("데이터 insert 처리 : "+iruser.getEmp_no());
 					   // 신규등록시는 초기화 패스워드 처리함. 업데이트시에는 password 수정안함.
-					   iruser.setPasswd(init_password);
+					   // 패스워드 초기화는 user_id + inno + init_password 의 str을 sha256 hash함.
+					   //String enc_initpasswd = getEncrypt(user_id+"inno"+init_password);
+					   //logger.debug("암호화된 초기화 패스워드"+ enc_initpasswd);
+					   //iruser.setPasswd(enc_initpasswd);
+					   // 패스워드 초기화 값을 동기화한 패스워드로 변경함. 20201026
+					   iruser.setPasswd(user_pass_sso);	 // user_pass_sso 로 변경함. 
 					   irUserService.addUserBean(iruser );
 				   }catch (Exception e ) {
 					   logger.debug("데이터 insert 처리 오류 : " +iruser.getEmp_no() + " / " + e.getMessage() );
@@ -475,5 +501,46 @@ public class SyncService {
 			   logger.error("ir_user 정보 입력 " + e.getMessage());
 		   }
 	   }
+	   
+ 
+		
+		/**
+		 * SHA-256 암호화 함
+		 * @param source 원본
+		 * @return
+		 */
+		public static String getEncrypt(String source) {
+			
+			String result = "";
+			
+			byte[] a = source.getBytes();
+			byte[] bytes = new byte[a.length];
+			
+			System.arraycopy(a, 0, bytes, 0, a.length);
+			//System.arraycopy(salt, 0, bytes, a.length, salt.length);
+			
+			try {
+				// 암호화 방식 지정 메소드
+				MessageDigest md = MessageDigest.getInstance("SHA-256");
+				md.update(bytes);
+				
+				byte[] byteData = md.digest();
+				
+				StringBuffer sb = new StringBuffer();
+				for (int i = 0; i < byteData.length; i++) {
+					sb.append(Integer.toString((byteData[i] & 0xFF) + 256, 16).substring(1));
+				}
+				
+				result = sb.toString();
+			} catch (NoSuchAlgorithmException e) {
+				e.printStackTrace();
+			}
+			
+			return result;
+		}
+		
+		 
+		
+		
 	  
 }
