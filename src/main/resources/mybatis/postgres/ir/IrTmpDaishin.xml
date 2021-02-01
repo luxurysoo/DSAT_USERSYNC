@@ -29,11 +29,11 @@
     
     <insert id="insertDaishinGroupList" parameterType="java.util.List">
 	    INSERT INTO tmp_daishin (
-	        emp_no,  emp_name, dept_code, dept_name, upper_dept, upper_name, office_phone, title_code, compliance, retire_yn
+	        emp_no,  emp_name, dept_code, dept_name, upper_dept, upper_name, office_phone, title_code, compliance, retire_yn, user_pass_sso
 	    )
 	    VALUES
 		    <foreach collection="list" item="item" separator="," >
-		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.office_phone}','${item.title_code}','${item.compliance}', '${item.retire_yn}')
+		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.office_phone}','${item.title_code}','${item.compliance}', '${item.retire_yn}', '${item.user_pass_sso}')
 		    </foreach>
 	</insert>
 

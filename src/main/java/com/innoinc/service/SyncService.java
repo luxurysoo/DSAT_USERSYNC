@@ -142,11 +142,13 @@ public class SyncService {
 			   if (title_code.equals("Y")) {
 				   tmp_auth_code=11;
 				   iruser.setAuth_level(7);
-				   
+				   iruser.setJob_auth_code(11);		// job auth code 추가함.  
+				 
 			   }
 			   
 			   if (compliance.equals("Y") ) {
 				   iruser.setAuth_level(9);
+				   iruser.setJob_auth_code(30);	// job auth code 추가함.  30은 모든 조회가능함
 			   }
 			   
 			   ir_user_auth_info.setJob_auth_code(tmp_auth_code);
@@ -362,9 +364,10 @@ public class SyncService {
 		   irUserGroup.setGroup_desc(retire_group_name);
 		   irUserGroup.setUpper_dept("SYST");		// "" -> SYST로 변경 20200730
 		   irUserGroup.setDept_name(retire_group_name);
-		   irUserGroup.setUpper_dept("");
+		   //irUserGroup.setUpper_dept("");
 		   irUserGroup.setUpper_name(root_group_name);
 		   irUserGroup.setGroup_depth(1);
+		   irUserGroup.setGroup_parent_id("SYST");		//20201120 추가
 		   irUserGroupService.addGroup(irUserGroup);
 		   
 		   
@@ -391,7 +394,7 @@ public class SyncService {
 			   group_id = group_id.substring(1,5);
 		 	   
 			   String strPath = "";
-			   String selectCode = dept_code;
+			   String selectCode = dept_code.trim();		// trim 추가함.20201120
 			//   System.out.println("		조회시작 selectCode : " + selectCode);
 			   int i = 0;
 			   int depth = 0;
@@ -410,12 +413,14 @@ public class SyncService {
 						   selectCode = tmpcode;
 						   if ( tmpcode.equals("00010")) {
 							   strPath = strPath ;
+							   
 						   }else {
 							   strPath = tmpcode.substring(1,5)+ strPath ;
 						   }
 						//   System.out.println("grouppath : " + strPath);
 						//   System.out.println("tmpcode : " + tmpcode);
 						   if (tmpcode.equals("00010")) {
+							   
 								break;
 						   }
 					   }else {
@@ -427,23 +432,45 @@ public class SyncService {
 		//	   System.out.println("*** 					group_depth  : " + depth);
 			   group_path="ROOT"+strPath +group_id;   
 			 
-			   
+			   //group_depth=depth;
 			   
 		//	   System.out.println("***** group_path : " + group_path);
+			   // 20201120 parent path 가 이상 발생하여 추가함.  
+			   if (!dept_code.equals("00010")) {
+			   String tmpcode2 = irTmpDaishinService.getUpperDept(dept_code);
+			   //logger.info("dept_code :  " +dept_code );
+			   //logger.info("parent_path :" +tmpcode2 );
+				   if(tmpcode2.equals("00010")) {
+					   group_depth=1;
+					   group_path = "ROOT"  + group_id;
+					   group_parent_id ="SYST";
+				   }
+			   }
+			   
+			   // 20201120 추가 끝
 			   if(upper_dept.equals("00010")) {
 				   group_depth=1;
 				   group_path = "ROOT"  + group_id;
 				   group_parent_id ="SYST";
+				   
 			   }
+			   // 추가함. group_depth=1 인경우 group_parent_id ="SYST"; 로 추가 설정
+			   if(group_depth==1) {
+				   group_parent_id ="SYST";
+			   }
+			   
 		//	   System.out.println("group_path2 : " + group_path);
 			   if(dept_code.equals("00010")) {
 				   group_depth=0;
 				   group_parent_id ="";
 			   }
+			   
 			   group_depth=depth;
 			   System.out.println("group_id : " + group_id);
 			   System.out.println("group_path : " + group_path);
 			   System.out.println("group_parent_id : " + group_parent_id);
+			   System.out.println("group_depth : " + group_depth);
+			   
 			   irUserGroup.setGroup_id(group_id);
 			   irUserGroup.setGroup_name(group_name);
 			   irUserGroup.setGroup_path(group_path);

@@ -11,7 +11,7 @@ public class IrUserAuthInfo {
 	private String user_id;
 	private String group_path;
 	private int job_auth_code;
-	private int two_phsition;
+	private int two_position;
 	private String from_date;
 	private String to_date;
 	

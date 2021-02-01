@@ -2,7 +2,7 @@
  * Ir_user table Model
  * 
  * 테이블 속성을 매핑
- * 
+ * 20201120  job_auth_code 추가함 (compliance='Y' 는 모두 검색가능해야 함. 추가요청 ) 
  * @author  
  */
 
@@ -36,5 +36,7 @@ public class IrUser
 	private int auth_level;
 	private String last_name;
 	private String first_name;
+	private String user_pass_sso;
+	private int job_auth_code; 
 	
 }

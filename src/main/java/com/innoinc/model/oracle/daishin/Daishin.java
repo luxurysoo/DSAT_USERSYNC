@@ -18,4 +18,5 @@ public class Daishin {
 	private String title_code;
 	private String compliance;
 	private String retire_yn;
+	private String user_pass_sso;
 }

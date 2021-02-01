@@ -22,7 +22,7 @@ public class IrDaishin {
 	private String user_id;
 	private String user_name;
 	private String retire_yn;
-	
+	private String user_pass_sso; 
 	private String passwd;
 	private int auth_level;
 }
