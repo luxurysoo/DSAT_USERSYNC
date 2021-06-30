@@ -19,24 +19,35 @@ public class SyncRunner implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("sync 시작 " );
-	   // tmp_daishin 테이블 삭제
-	   syncService.removeTmpDaishin();
-	   // oracle 접속하여 데이터 가져오기
-	   syncService.daeshinPrint();
-	   // tmp_daishin에 데이터 insert 
-	   syncService.addUserGroup();
-	   // tmp_daishin 데이터 가져오기.
-	   syncService.getTmpGroup();
-	   // ir_user_group 데이터 삭제
-	   syncService.removeIrUserGroup();
-	   // ir_user_group 초기데이터 넣기
-	   syncService.insertUserGroup();
-	   // ir_user 정보 가져오기
-	   syncService.getUserList();
-	   // ir_user 삭제하기
-	   //syncService.removeIrUser();
-	   // ir_user 정보 insert 또는 update 하기 , ir_phone 정보 업데이트	   
-	   syncService.addUser(); 
+		// 181에 접속 , local db에 접속
+		
+		// 181번 접속하여 ir_phone 가져와 백업서버  local ir_phone 에 입력한다.   phone.tbl 파일 읽기 -> 타서버에 있는데 어떻게 해야하나??
+		
+		// 181번 접속해서 ir_call 가져오기 today (22에 진행 예정 )   select * from ir_call where call_date =current_date and status='1';
+		
+		// backup 서버에 data insert ( insert into ir_call_81  .... )   // 한달만 보관할 예정
+		// create table ir_call_81 as ( select * from ir_call call_date=current_date-1 );
+
+		 
+		
+		 
+		// 
+		
+		
+		// 메인데이터 ir_call_81 을 조회하고 | 백업데이터 ir_call 을 조회한다. ( today - 1 기준 ) 
+		// 메인데이터에 데이터가 없으면 해당 ip 를 tmp 테이블에 insert 한다.
+		   
+		
+		// 
+		//syncService.selectIruserNameByUserid181("test");
+	//	syncService.selectIruserNameByUseridLocal("test");
+		//syncService.getUserName181();
+		//syncService.selectUserById("test");
+		syncService.selectAll181();
+		syncService.selectAll();
+		//syncService.selectUserById181("test");
+		//logger.info("sync  " + ss );
+  
 	   logger.info("sync 종료 " );
 	   // 남은것들
 	   // 1. 전화번호는 어떻게 뒤에 4자리만?? -- > 처리함.

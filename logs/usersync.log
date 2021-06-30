@@ -1,698 +1,265 @@
-[2020-10-26 11:14:26:817][main] INFO  - Starting DemoApplication on luxurysooNB with PID 35004 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:14:26:829][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:14:27:2277][main] INFO  - Started DemoApplication in 1.844 seconds (JVM running for 6.725)
-[2020-10-26 11:14:27:2279][main] INFO  - sync 시작 
-[2020-10-26 11:14:28:2488][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:14:29:3756][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:14:29:3773][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:14:29:3808][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:14:29:3827][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:14:29:3827][main] INFO  - user 정보 입력  
-[2020-10-26 11:14:29:3828][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:14:29:3828][main] INFO  - sync 종료 
-[2020-10-26 11:16:36:644][main] INFO  - Starting DemoApplication on luxurysooNB with PID 43808 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:16:36:648][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:16:37:1786][main] INFO  - Started DemoApplication in 1.482 seconds (JVM running for 5.991)
-[2020-10-26 11:16:37:1788][main] INFO  - sync 시작 
-[2020-10-26 11:16:37:1934][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:16:39:3102][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:16:39:3109][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:16:39:3118][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:16:39:3124][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:16:39:3124][main] INFO  - user 정보 입력  
-[2020-10-26 11:16:39:3125][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:16:39:3125][main] INFO  - sync 종료 
-[2020-10-26 11:17:53:644][main] INFO  - Starting DemoApplication on luxurysooNB with PID 4268 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:17:53:648][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:17:54:1767][main] INFO  - Started DemoApplication in 1.467 seconds (JVM running for 5.722)
-[2020-10-26 11:17:54:1768][main] INFO  - sync 시작 
-[2020-10-26 11:17:55:1915][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:17:56:3081][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:17:56:3087][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:17:56:3095][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:17:56:3099][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:17:56:3099][main] INFO  - user 정보 입력  
-[2020-10-26 11:17:56:3100][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:17:56:3100][main] INFO  - sync 종료 
-[2020-10-26 11:20:32:636][main] INFO  - Starting DemoApplication on luxurysooNB with PID 31312 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:20:32:639][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:20:33:1889][main] INFO  - Started DemoApplication in 1.582 seconds (JVM running for 5.739)
-[2020-10-26 11:20:33:1890][main] INFO  - sync 시작 
-[2020-10-26 11:20:34:2044][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:20:34:2309][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 11:20:34:2377][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 11:20:34:2392][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:20:34:2402][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:20:34:2567][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:20:34:2576][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:20:34:2576][main] INFO  - user 정보 입력  
-[2020-10-26 11:20:34:2955][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:20:34:2955][main] INFO  - sync 종료 
-[2020-10-26 11:25:38:912][main] INFO  - Starting DemoApplication on luxurysooNB with PID 46472 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:25:38:916][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:25:39:2640][main] INFO  - Started DemoApplication in 2.243 seconds (JVM running for 7.733)
-[2020-10-26 11:25:39:2642][main] INFO  - sync 시작 
-[2020-10-26 11:25:40:2895][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:25:40:3206][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 11:25:40:3269][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 11:25:40:3284][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:25:40:3292][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:25:40:3470][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:25:40:3486][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:25:40:3486][main] INFO  - user 정보 입력  
-[2020-10-26 11:25:41:3858][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:25:41:3858][main] INFO  - sync 종료 
-[2020-10-26 11:27:15:689][main] INFO  - Starting DemoApplication on luxurysooNB with PID 1868 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:27:15:692][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:27:16:2076][main] INFO  - Started DemoApplication in 1.729 seconds (JVM running for 7.387)
-[2020-10-26 11:27:16:2078][main] INFO  - sync 시작 
-[2020-10-26 11:27:17:2266][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:27:17:2543][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 11:27:17:2597][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 11:27:17:2612][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:27:17:2620][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:27:17:2785][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:27:17:2801][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:27:17:2801][main] INFO  - user 정보 입력  
-[2020-10-26 11:27:18:3168][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:27:18:3168][main] INFO  - sync 종료 
-[2020-10-26 11:28:29:916][main] INFO  - Starting DemoApplication on luxurysooNB with PID 45920 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 11:28:29:920][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 11:28:31:2528][main] INFO  - Started DemoApplication in 2.053 seconds (JVM running for 7.295)
-[2020-10-26 11:28:31:2529][main] INFO  - sync 시작 
-[2020-10-26 11:28:31:2722][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 11:28:31:3041][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 11:28:31:3089][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 11:28:31:3111][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 11:28:31:3122][main] INFO  - ir_user_group 삭제 
-[2020-10-26 11:28:31:3333][main] INFO  - ir_user_group 입력  
-[2020-10-26 11:28:31:3344][main] INFO  - ir_user 정보 입력 
-[2020-10-26 11:28:31:3344][main] INFO  - user 정보 입력  
-[2020-10-26 11:28:32:3760][main] INFO  - 폰정보 업데이트  
-[2020-10-26 11:28:32:3761][main] INFO  - sync 종료 
-[2020-10-26 13:19:19:632][main] INFO  - Starting DemoApplication on luxurysooNB with PID 31116 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 13:19:19:635][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 13:19:20:1754][main] INFO  - Started DemoApplication in 1.426 seconds (JVM running for 5.513)
-[2020-10-26 13:19:20:1755][main] INFO  - sync 시작 
-[2020-10-26 13:19:20:1897][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 13:19:20:2109][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 13:19:20:2155][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 13:19:20:2168][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 13:19:20:2176][main] INFO  - ir_user_group 삭제 
-[2020-10-26 13:19:20:2322][main] INFO  - ir_user_group 입력  
-[2020-10-26 13:19:20:2331][main] INFO  - ir_user 정보 입력 
-[2020-10-26 13:19:20:2331][main] INFO  - user 정보 입력  
-[2020-10-26 13:19:21:2613][main] INFO  - 폰정보 업데이트  
-[2020-10-26 13:19:21:2613][main] INFO  - sync 종료 
-[2020-10-26 13:22:10:713][main] INFO  - Starting DemoApplication on luxurysooNB with PID 46840 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 13:22:10:717][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 13:22:11:1886][main] INFO  - Started DemoApplication in 1.535 seconds (JVM running for 5.747)
-[2020-10-26 13:22:11:1887][main] INFO  - sync 시작 
-[2020-10-26 13:22:11:2030][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 13:22:12:2244][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 13:22:12:2286][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 13:22:12:2298][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 13:22:12:2307][main] INFO  - ir_user_group 삭제 
-[2020-10-26 13:22:12:2468][main] INFO  - ir_user_group 입력  
-[2020-10-26 13:22:12:2476][main] INFO  - ir_user 정보 입력 
-[2020-10-26 13:22:12:2476][main] INFO  - user 정보 입력  
-[2020-10-26 13:22:12:2806][main] INFO  - 폰정보 업데이트  
-[2020-10-26 13:22:12:2806][main] INFO  - sync 종료 
-[2020-10-26 13:22:56:647][main] INFO  - Starting DemoApplication on luxurysooNB with PID 20528 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 13:22:56:651][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 13:22:57:1904][main] INFO  - Started DemoApplication in 1.585 seconds (JVM running for 6.011)
-[2020-10-26 13:22:57:1905][main] INFO  - sync 시작 
-[2020-10-26 13:22:57:2047][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 13:22:57:2262][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 13:22:57:2301][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 13:22:57:2315][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 13:22:57:2325][main] INFO  - ir_user_group 삭제 
-[2020-10-26 13:22:57:2476][main] INFO  - ir_user_group 입력  
-[2020-10-26 13:22:57:2483][main] INFO  - ir_user 정보 입력 
-[2020-10-26 13:22:57:2484][main] INFO  - user 정보 입력  
-[2020-10-26 13:22:58:2815][main] INFO  - 폰정보 업데이트  
-[2020-10-26 13:22:58:2815][main] INFO  - sync 종료 
-[2020-10-26 15:05:50:688][main] INFO  - Starting DemoApplication on luxurysooNB with PID 44332 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:05:50:692][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:05:51:1950][main] INFO  - Started DemoApplication in 1.603 seconds (JVM running for 5.762)
-[2020-10-26 15:05:51:1951][main] INFO  - sync 시작 
-[2020-10-26 15:05:51:2121][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:05:52:2373][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:05:52:2415][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:05:52:2428][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:05:52:2436][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:05:52:2570][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:05:52:2578][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:05:52:2578][main] INFO  - user 정보 입력  
-[2020-10-26 15:05:52:2579][main] INFO  - last name : 퇴
-[2020-10-26 15:05:52:2579][main] INFO  - first name : 자
-[2020-10-26 15:06:16:666][main] INFO  - Starting DemoApplication on luxurysooNB with PID 49316 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:06:16:669][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:06:17:1947][main] INFO  - Started DemoApplication in 1.629 seconds (JVM running for 5.987)
-[2020-10-26 15:06:17:1949][main] INFO  - sync 시작 
-[2020-10-26 15:06:17:2095][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:06:18:2338][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:06:18:2387][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:06:18:2400][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:06:18:2409][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:06:18:2547][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:06:18:2555][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:06:18:2555][main] INFO  - user 정보 입력  
-[2020-10-26 15:06:18:2556][main] INFO  - last name : 퇴
-[2020-10-26 15:06:18:2556][main] INFO  - first name : 직
-[2020-10-26 15:06:46:600][main] INFO  - Starting DemoApplication on luxurysooNB with PID 1364 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:06:46:604][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:06:47:1718][main] INFO  - Started DemoApplication in 1.422 seconds (JVM running for 5.475)
-[2020-10-26 15:06:47:1719][main] INFO  - sync 시작 
-[2020-10-26 15:06:47:1860][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:06:47:2068][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:06:48:2113][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:06:48:2127][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:06:48:2136][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:06:48:2302][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:06:48:2313][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:06:48:2313][main] INFO  - user 정보 입력  
-[2020-10-26 15:06:48:2313][main] INFO  - last name : 퇴
-[2020-10-26 15:06:48:2313][main] INFO  - first name : 직자
-[2020-10-26 15:22:34:771][main] INFO  - Starting DemoApplication on luxurysooNB with PID 30624 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:22:34:776][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:22:35:2112][main] INFO  - Started DemoApplication in 1.726 seconds (JVM running for 6.238)
-[2020-10-26 15:22:35:2113][main] INFO  - sync 시작 
-[2020-10-26 15:22:35:2288][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:22:35:2523][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:22:35:2566][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:22:35:2581][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:22:35:2587][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:22:36:2736][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:22:36:2746][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:22:36:2746][main] INFO  - user 정보 입력  
-[2020-10-26 15:22:36:2746][main] INFO  - last name : 퇴
-[2020-10-26 15:22:36:2746][main] INFO  - first name : 직자
-[2020-10-26 15:22:36:3037][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:22:36:3037][main] INFO  - sync 종료 
-[2020-10-26 15:29:02:627][main] INFO  - Starting DemoApplication on luxurysooNB with PID 38152 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:29:02:632][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:29:03:1755][main] INFO  - Started DemoApplication in 1.46 seconds (JVM running for 5.885)
-[2020-10-26 15:29:03:1757][main] INFO  - sync 시작 
-[2020-10-26 15:29:03:1924][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:29:04:2193][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:29:04:2233][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:29:04:2248][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:29:04:2256][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:29:04:2431][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:29:04:2444][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:29:04:2444][main] INFO  - user 정보 입력  
-[2020-10-26 15:29:04:2445][main] INFO  - last name : 퇴
-[2020-10-26 15:29:04:2445][main] INFO  - first name : 직자
-[2020-10-26 15:29:04:2728][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:29:04:2728][main] INFO  - sync 종료 
-[2020-10-26 15:29:49:621][main] INFO  - Starting DemoApplication on luxurysooNB with PID 4824 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:29:49:624][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:29:50:1885][main] INFO  - Started DemoApplication in 1.593 seconds (JVM running for 5.883)
-[2020-10-26 15:29:50:1886][main] INFO  - sync 시작 
-[2020-10-26 15:29:50:2040][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:29:51:2272][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:29:51:2318][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:29:51:2331][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:29:51:2339][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:29:51:2517][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:29:51:2525][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:29:51:2526][main] INFO  - user 정보 입력  
-[2020-10-26 15:29:51:2526][main] INFO  - last name : 퇴
-[2020-10-26 15:29:51:2526][main] INFO  - first name : 직자
-[2020-10-26 15:29:51:2548][main] INFO  - last name : 홍
-[2020-10-26 15:29:51:2548][main] INFO  - first name : 길동
-[2020-10-26 15:29:51:2562][main] INFO  - last name : 이
-[2020-10-26 15:29:51:2562][main] INFO  - first name : 창현
-[2020-10-26 15:29:51:2571][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2571][main] INFO  - first name : 기동
-[2020-10-26 15:29:51:2581][main] INFO  - last name : 최
-[2020-10-26 15:29:51:2582][main] INFO  - first name : 민수
-[2020-10-26 15:29:51:2594][main] INFO  - last name : 하
-[2020-10-26 15:29:51:2594][main] INFO  - first name : 재투
-[2020-10-26 15:29:51:2604][main] INFO  - last name : 최
-[2020-10-26 15:29:51:2604][main] INFO  - first name : 병운
-[2020-10-26 15:29:51:2613][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2613][main] INFO  - first name : 수희
-[2020-10-26 15:29:51:2622][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2622][main] INFO  - first name : 민왕
-[2020-10-26 15:29:51:2632][main] INFO  - last name : 최
-[2020-10-26 15:29:51:2632][main] INFO  - first name : 철이
-[2020-10-26 15:29:51:2642][main] INFO  - last name : 조
-[2020-10-26 15:29:51:2643][main] INFO  - first name : 원수
-[2020-10-26 15:29:51:2651][main] INFO  - last name : 기
-[2020-10-26 15:29:51:2651][main] INFO  - first name : 원수
-[2020-10-26 15:29:51:2662][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2662][main] INFO  - first name : 정일
-[2020-10-26 15:29:51:2668][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2668][main] INFO  - first name : 갑주
-[2020-10-26 15:29:51:2677][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2677][main] INFO  - first name : 관주
-[2020-10-26 15:29:51:2686][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2686][main] INFO  - first name : 기보
-[2020-10-26 15:29:51:2697][main] INFO  - last name : 권
-[2020-10-26 15:29:51:2697][main] INFO  - first name : 혁차
-[2020-10-26 15:29:51:2724][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2724][main] INFO  - first name : 세로
-[2020-10-26 15:29:51:2776][main] INFO  - last name : 가
-[2020-10-26 15:29:51:2777][main] INFO  - first name : 나다
-[2020-10-26 15:29:51:2783][main] INFO  - last name : 김
-[2020-10-26 15:29:51:2783][main] INFO  - first name : 관주
-[2020-10-26 15:29:51:2792][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:29:51:2792][main] INFO  - sync 종료 
-[2020-10-26 15:32:05:624][main] INFO  - Starting DemoApplication on luxurysooNB with PID 34652 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:32:05:627][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:32:06:1859][main] INFO  - Started DemoApplication in 1.549 seconds (JVM running for 5.904)
-[2020-10-26 15:32:06:1860][main] INFO  - sync 시작 
-[2020-10-26 15:32:07:2018][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:32:07:2283][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:32:07:2323][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:32:07:2337][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:32:07:2343][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:32:07:2506][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:32:07:2516][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:32:07:2516][main] INFO  - user 정보 입력  
-[2020-10-26 15:32:07:2517][main] INFO  - last name : 퇴
-[2020-10-26 15:32:07:2517][main] INFO  - first name : 직자
-[2020-10-26 15:32:07:2543][main] INFO  - last name : 홍
-[2020-10-26 15:32:07:2543][main] INFO  - first name : 길동
-[2020-10-26 15:32:07:2559][main] INFO  - last name : 이
-[2020-10-26 15:32:07:2559][main] INFO  - first name : 창현
-[2020-10-26 15:32:07:2568][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2568][main] INFO  - first name : 기동
-[2020-10-26 15:32:07:2579][main] INFO  - last name : 최
-[2020-10-26 15:32:07:2580][main] INFO  - first name : 민수
-[2020-10-26 15:32:07:2591][main] INFO  - last name : 하
-[2020-10-26 15:32:07:2591][main] INFO  - first name : 재투
-[2020-10-26 15:32:07:2601][main] INFO  - last name : 최
-[2020-10-26 15:32:07:2601][main] INFO  - first name : 병운
-[2020-10-26 15:32:07:2609][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2609][main] INFO  - first name : 수희
-[2020-10-26 15:32:07:2619][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2619][main] INFO  - first name : 민왕
-[2020-10-26 15:32:07:2627][main] INFO  - last name : 최
-[2020-10-26 15:32:07:2627][main] INFO  - first name : 철이
-[2020-10-26 15:32:07:2635][main] INFO  - last name : 조
-[2020-10-26 15:32:07:2635][main] INFO  - first name : 원수
-[2020-10-26 15:32:07:2643][main] INFO  - last name : 기
-[2020-10-26 15:32:07:2643][main] INFO  - first name : 원수
-[2020-10-26 15:32:07:2654][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2654][main] INFO  - first name : 정일
-[2020-10-26 15:32:07:2665][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2665][main] INFO  - first name : 갑주
-[2020-10-26 15:32:07:2675][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2675][main] INFO  - first name : 관주
-[2020-10-26 15:32:07:2684][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2685][main] INFO  - first name : 기보
-[2020-10-26 15:32:07:2694][main] INFO  - last name : 권
-[2020-10-26 15:32:07:2694][main] INFO  - first name : 혁차
-[2020-10-26 15:32:07:2718][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2718][main] INFO  - first name : 세로
-[2020-10-26 15:32:07:2782][main] INFO  - last name : 가
-[2020-10-26 15:32:07:2782][main] INFO  - first name : 나다
-[2020-10-26 15:32:07:2788][main] INFO  - last name : 김
-[2020-10-26 15:32:07:2788][main] INFO  - first name : 관주
-[2020-10-26 15:32:07:2797][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:32:07:2797][main] INFO  - sync 종료 
-[2020-10-26 15:33:33:660][main] INFO  - Starting DemoApplication on luxurysooNB with PID 29660 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:33:33:664][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:33:34:1874][main] INFO  - Started DemoApplication in 1.582 seconds (JVM running for 5.958)
-[2020-10-26 15:33:34:1875][main] INFO  - sync 시작 
-[2020-10-26 15:33:34:2027][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:33:34:2240][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:33:34:2284][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:33:34:2298][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:33:34:2305][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:33:35:2502][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:33:35:2516][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:33:35:2516][main] INFO  - user 정보 입력  
-[2020-10-26 15:33:35:2516][main] INFO  - last name : 퇴
-[2020-10-26 15:33:35:2516][main] INFO  - first name : 직자
-[2020-10-26 15:33:35:2597][main] INFO  - last name : 홍
-[2020-10-26 15:33:35:2597][main] INFO  - first name : 길동
-[2020-10-26 15:33:35:2617][main] INFO  - last name : 이
-[2020-10-26 15:33:35:2617][main] INFO  - first name : 창현
-[2020-10-26 15:33:35:2630][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2630][main] INFO  - first name : 기동
-[2020-10-26 15:33:35:2642][main] INFO  - last name : 최
-[2020-10-26 15:33:35:2642][main] INFO  - first name : 민수
-[2020-10-26 15:33:35:2654][main] INFO  - last name : 하
-[2020-10-26 15:33:35:2654][main] INFO  - first name : 재투
-[2020-10-26 15:33:35:2665][main] INFO  - last name : 최
-[2020-10-26 15:33:35:2665][main] INFO  - first name : 병운
-[2020-10-26 15:33:35:2676][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2676][main] INFO  - first name : 수희
-[2020-10-26 15:33:35:2688][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2688][main] INFO  - first name : 민왕
-[2020-10-26 15:33:35:2697][main] INFO  - last name : 최
-[2020-10-26 15:33:35:2697][main] INFO  - first name : 철이
-[2020-10-26 15:33:35:2704][main] INFO  - last name : 조
-[2020-10-26 15:33:35:2704][main] INFO  - first name : 원수
-[2020-10-26 15:33:35:2712][main] INFO  - last name : 기
-[2020-10-26 15:33:35:2712][main] INFO  - first name : 원수
-[2020-10-26 15:33:35:2721][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2721][main] INFO  - first name : 정일
-[2020-10-26 15:33:35:2730][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2730][main] INFO  - first name : 갑주
-[2020-10-26 15:33:35:2740][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2740][main] INFO  - first name : 관주
-[2020-10-26 15:33:35:2751][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2751][main] INFO  - first name : 기보
-[2020-10-26 15:33:35:2762][main] INFO  - last name : 권
-[2020-10-26 15:33:35:2762][main] INFO  - first name : 혁차
-[2020-10-26 15:33:35:2786][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2786][main] INFO  - first name : 세로
-[2020-10-26 15:33:35:2846][main] INFO  - last name : 가
-[2020-10-26 15:33:35:2846][main] INFO  - first name : 나다
-[2020-10-26 15:33:35:2883][main] INFO  - last name : 김
-[2020-10-26 15:33:35:2883][main] INFO  - first name : 관주
-[2020-10-26 15:33:35:2890][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:33:35:2890][main] INFO  - sync 종료 
-[2020-10-26 15:34:12:702][main] INFO  - Starting DemoApplication on luxurysooNB with PID 42416 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:34:12:706][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:34:14:1936][main] INFO  - Started DemoApplication in 1.585 seconds (JVM running for 5.956)
-[2020-10-26 15:34:14:1938][main] INFO  - sync 시작 
-[2020-10-26 15:34:14:2098][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:34:14:2366][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:34:14:2418][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:34:14:2431][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:34:14:2440][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:34:14:2623][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:34:14:2631][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:34:14:2631][main] INFO  - user 정보 입력  
-[2020-10-26 15:34:14:2632][main] INFO  - last name : 퇴
-[2020-10-26 15:34:14:2632][main] INFO  - first name : 직자
-[2020-10-26 15:34:14:2707][main] INFO  - last name : 홍
-[2020-10-26 15:34:14:2707][main] INFO  - first name : 길동
-[2020-10-26 15:34:14:2722][main] INFO  - last name : 이
-[2020-10-26 15:34:14:2722][main] INFO  - first name : 창현
-[2020-10-26 15:34:15:2731][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2731][main] INFO  - first name : 기동
-[2020-10-26 15:34:15:2740][main] INFO  - last name : 최
-[2020-10-26 15:34:15:2740][main] INFO  - first name : 민수
-[2020-10-26 15:34:15:2748][main] INFO  - last name : 하
-[2020-10-26 15:34:15:2748][main] INFO  - first name : 재투
-[2020-10-26 15:34:15:2758][main] INFO  - last name : 최
-[2020-10-26 15:34:15:2758][main] INFO  - first name : 병운
-[2020-10-26 15:34:15:2767][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2767][main] INFO  - first name : 수희
-[2020-10-26 15:34:15:2777][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2777][main] INFO  - first name : 민왕
-[2020-10-26 15:34:15:2787][main] INFO  - last name : 최
-[2020-10-26 15:34:15:2787][main] INFO  - first name : 철이
-[2020-10-26 15:34:15:2799][main] INFO  - last name : 조
-[2020-10-26 15:34:15:2799][main] INFO  - first name : 원수
-[2020-10-26 15:34:15:2809][main] INFO  - last name : 기
-[2020-10-26 15:34:15:2809][main] INFO  - first name : 원수
-[2020-10-26 15:34:15:2819][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2819][main] INFO  - first name : 정일
-[2020-10-26 15:34:15:2827][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2827][main] INFO  - first name : 갑주
-[2020-10-26 15:34:15:2836][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2836][main] INFO  - first name : 관주
-[2020-10-26 15:34:15:2844][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2844][main] INFO  - first name : 기보
-[2020-10-26 15:34:15:2855][main] INFO  - last name : 권
-[2020-10-26 15:34:15:2855][main] INFO  - first name : 혁차
-[2020-10-26 15:34:15:2892][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2892][main] INFO  - first name : 세로
-[2020-10-26 15:34:15:2978][main] INFO  - last name : 가
-[2020-10-26 15:34:15:2978][main] INFO  - first name : 나다
-[2020-10-26 15:34:15:2984][main] INFO  - last name : 김
-[2020-10-26 15:34:15:2984][main] INFO  - first name : 관주
-[2020-10-26 15:34:15:2993][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:34:15:2993][main] INFO  - sync 종료 
-[2020-10-26 15:34:48:615][main] INFO  - Starting DemoApplication on luxurysooNB with PID 38808 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:34:48:619][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:34:49:1721][main] INFO  - Started DemoApplication in 1.397 seconds (JVM running for 5.551)
-[2020-10-26 15:34:49:1723][main] INFO  - sync 시작 
-[2020-10-26 15:34:49:1870][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:34:49:2109][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:34:49:2153][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:34:49:2167][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:34:49:2175][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:34:49:2330][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:34:49:2337][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:34:49:2338][main] INFO  - user 정보 입력  
-[2020-10-26 15:34:49:2338][main] INFO  - last name : 퇴
-[2020-10-26 15:34:49:2338][main] INFO  - first name : 직자
-[2020-10-26 15:34:49:2406][main] INFO  - last name : 홍
-[2020-10-26 15:34:49:2406][main] INFO  - first name : 길동
-[2020-10-26 15:34:49:2423][main] INFO  - last name : 이
-[2020-10-26 15:34:49:2424][main] INFO  - first name : 창현
-[2020-10-26 15:34:49:2435][main] INFO  - last name : 김
-[2020-10-26 15:34:49:2435][main] INFO  - first name : 기동
-[2020-10-26 15:34:50:2446][main] INFO  - last name : 최
-[2020-10-26 15:34:50:2446][main] INFO  - first name : 민수
-[2020-10-26 15:34:50:2459][main] INFO  - last name : 하
-[2020-10-26 15:34:50:2459][main] INFO  - first name : 재투
-[2020-10-26 15:34:50:2472][main] INFO  - last name : 최
-[2020-10-26 15:34:50:2472][main] INFO  - first name : 병운
-[2020-10-26 15:34:50:2483][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2483][main] INFO  - first name : 수희
-[2020-10-26 15:34:50:2492][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2492][main] INFO  - first name : 민왕
-[2020-10-26 15:34:50:2503][main] INFO  - last name : 최
-[2020-10-26 15:34:50:2504][main] INFO  - first name : 철이
-[2020-10-26 15:34:50:2515][main] INFO  - last name : 조
-[2020-10-26 15:34:50:2515][main] INFO  - first name : 원수
-[2020-10-26 15:34:50:2527][main] INFO  - last name : 기
-[2020-10-26 15:34:50:2527][main] INFO  - first name : 원수
-[2020-10-26 15:34:50:2540][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2540][main] INFO  - first name : 정일
-[2020-10-26 15:34:50:2548][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2548][main] INFO  - first name : 갑주
-[2020-10-26 15:34:50:2556][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2556][main] INFO  - first name : 관주
-[2020-10-26 15:34:50:2565][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2565][main] INFO  - first name : 기보
-[2020-10-26 15:34:50:2577][main] INFO  - last name : 권
-[2020-10-26 15:34:50:2577][main] INFO  - first name : 혁차
-[2020-10-26 15:34:50:2607][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2608][main] INFO  - first name : 세로
-[2020-10-26 15:34:50:2681][main] INFO  - last name : 가
-[2020-10-26 15:34:50:2681][main] INFO  - first name : 나다
-[2020-10-26 15:34:50:2687][main] INFO  - last name : 김
-[2020-10-26 15:34:50:2688][main] INFO  - first name : 관주
-[2020-10-26 15:34:50:2696][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:34:50:2696][main] INFO  - sync 종료 
-[2020-10-26 15:35:26:609][main] INFO  - Starting DemoApplication on luxurysooNB with PID 36416 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:35:26:614][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:35:27:1766][main] INFO  - Started DemoApplication in 1.47 seconds (JVM running for 6.12)
-[2020-10-26 15:35:27:1768][main] INFO  - sync 시작 
-[2020-10-26 15:35:28:1928][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:35:28:2165][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:35:28:2216][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:35:28:2233][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:35:28:2242][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:35:28:2417][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:35:28:2428][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:35:28:2428][main] INFO  - user 정보 입력  
-[2020-10-26 15:35:28:2429][main] INFO  - last name : 퇴
-[2020-10-26 15:35:28:2429][main] INFO  - first name : 직자
-[2020-10-26 15:35:28:2528][main] INFO  - last name : 홍
-[2020-10-26 15:35:28:2528][main] INFO  - first name : 길동
-[2020-10-26 15:35:28:2544][main] INFO  - last name : 이
-[2020-10-26 15:35:28:2544][main] INFO  - first name : 창현
-[2020-10-26 15:35:28:2555][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2556][main] INFO  - first name : 기동
-[2020-10-26 15:35:28:2565][main] INFO  - last name : 최
-[2020-10-26 15:35:28:2565][main] INFO  - first name : 민수
-[2020-10-26 15:35:28:2574][main] INFO  - last name : 하
-[2020-10-26 15:35:28:2574][main] INFO  - first name : 재투
-[2020-10-26 15:35:28:2586][main] INFO  - last name : 최
-[2020-10-26 15:35:28:2586][main] INFO  - first name : 병운
-[2020-10-26 15:35:28:2598][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2598][main] INFO  - first name : 수희
-[2020-10-26 15:35:28:2607][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2607][main] INFO  - first name : 민왕
-[2020-10-26 15:35:28:2614][main] INFO  - last name : 최
-[2020-10-26 15:35:28:2615][main] INFO  - first name : 철이
-[2020-10-26 15:35:28:2621][main] INFO  - last name : 조
-[2020-10-26 15:35:28:2621][main] INFO  - first name : 원수
-[2020-10-26 15:35:28:2629][main] INFO  - last name : 기
-[2020-10-26 15:35:28:2629][main] INFO  - first name : 원수
-[2020-10-26 15:35:28:2636][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2636][main] INFO  - first name : 정일
-[2020-10-26 15:35:28:2643][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2643][main] INFO  - first name : 갑주
-[2020-10-26 15:35:28:2650][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2650][main] INFO  - first name : 관주
-[2020-10-26 15:35:28:2658][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2658][main] INFO  - first name : 기보
-[2020-10-26 15:35:28:2667][main] INFO  - last name : 권
-[2020-10-26 15:35:28:2667][main] INFO  - first name : 혁차
-[2020-10-26 15:35:28:2696][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2696][main] INFO  - first name : 세로
-[2020-10-26 15:35:28:2767][main] INFO  - last name : 가
-[2020-10-26 15:35:28:2767][main] INFO  - first name : 나다
-[2020-10-26 15:35:28:2772][main] INFO  - last name : 김
-[2020-10-26 15:35:28:2772][main] INFO  - first name : 관주
-[2020-10-26 15:35:28:2781][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:35:28:2781][main] INFO  - sync 종료 
-[2020-10-26 15:35:51:756][main] INFO  - Starting DemoApplication on luxurysooNB with PID 5224 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:35:51:758][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:35:52:2017][main] INFO  - Started DemoApplication in 1.684 seconds (JVM running for 6.312)
-[2020-10-26 15:35:52:2018][main] INFO  - sync 시작 
-[2020-10-26 15:35:53:2160][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:35:53:2380][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:35:53:2421][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:35:53:2434][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:35:53:2441][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:35:53:2610][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:35:53:2618][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:35:53:2619][main] INFO  - user 정보 입력  
-[2020-10-26 15:35:53:2619][main] INFO  - last name : 퇴
-[2020-10-26 15:35:53:2619][main] INFO  - first name : 직자
-[2020-10-26 15:35:53:2637][main] INFO  - last name : 홍
-[2020-10-26 15:35:53:2637][main] INFO  - first name : 길동
-[2020-10-26 15:35:53:2651][main] INFO  - last name : 이
-[2020-10-26 15:35:53:2651][main] INFO  - first name : 창현
-[2020-10-26 15:35:53:2662][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2662][main] INFO  - first name : 기동
-[2020-10-26 15:35:53:2671][main] INFO  - last name : 최
-[2020-10-26 15:35:53:2671][main] INFO  - first name : 민수
-[2020-10-26 15:35:53:2681][main] INFO  - last name : 하
-[2020-10-26 15:35:53:2681][main] INFO  - first name : 재투
-[2020-10-26 15:35:53:2692][main] INFO  - last name : 최
-[2020-10-26 15:35:53:2692][main] INFO  - first name : 병운
-[2020-10-26 15:35:53:2702][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2703][main] INFO  - first name : 수희
-[2020-10-26 15:35:53:2712][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2712][main] INFO  - first name : 민왕
-[2020-10-26 15:35:53:2721][main] INFO  - last name : 최
-[2020-10-26 15:35:53:2721][main] INFO  - first name : 철이
-[2020-10-26 15:35:53:2730][main] INFO  - last name : 조
-[2020-10-26 15:35:53:2730][main] INFO  - first name : 원수
-[2020-10-26 15:35:53:2738][main] INFO  - last name : 기
-[2020-10-26 15:35:53:2738][main] INFO  - first name : 원수
-[2020-10-26 15:35:53:2748][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2749][main] INFO  - first name : 정일
-[2020-10-26 15:35:53:2758][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2758][main] INFO  - first name : 갑주
-[2020-10-26 15:35:53:2767][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2767][main] INFO  - first name : 관주
-[2020-10-26 15:35:53:2777][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2777][main] INFO  - first name : 기보
-[2020-10-26 15:35:53:2789][main] INFO  - last name : 권
-[2020-10-26 15:35:53:2789][main] INFO  - first name : 혁차
-[2020-10-26 15:35:53:2814][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2814][main] INFO  - first name : 세로
-[2020-10-26 15:35:53:2893][main] INFO  - last name : 가
-[2020-10-26 15:35:53:2893][main] INFO  - first name : 나다
-[2020-10-26 15:35:53:2900][main] INFO  - last name : 김
-[2020-10-26 15:35:53:2900][main] INFO  - first name : 관주
-[2020-10-26 15:35:53:2910][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:35:53:2910][main] INFO  - sync 종료 
-[2020-10-26 15:36:26:623][main] INFO  - Starting DemoApplication on luxurysooNB with PID 10308 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:36:26:627][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:36:27:1748][main] INFO  - Started DemoApplication in 1.437 seconds (JVM running for 5.712)
-[2020-10-26 15:36:27:1749][main] INFO  - sync 시작 
-[2020-10-26 15:36:27:1891][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:36:27:2114][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:36:27:2163][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:36:27:2182][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:36:27:2194][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:36:27:2350][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:36:27:2359][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:36:27:2359][main] INFO  - user 정보 입력  
-[2020-10-26 15:36:27:2359][main] INFO  - last name : 퇴
-[2020-10-26 15:36:27:2359][main] INFO  - first name : 직자
-[2020-10-26 15:36:27:2379][main] INFO  - last name : 홍
-[2020-10-26 15:36:27:2379][main] INFO  - first name : 길동
-[2020-10-26 15:36:27:2396][main] INFO  - last name : 이
-[2020-10-26 15:36:27:2396][main] INFO  - first name : 창현
-[2020-10-26 15:36:27:2407][main] INFO  - last name : 김
-[2020-10-26 15:36:27:2408][main] INFO  - first name : 기동
-[2020-10-26 15:36:27:2419][main] INFO  - last name : 최
-[2020-10-26 15:36:27:2419][main] INFO  - first name : 민수
-[2020-10-26 15:36:27:2429][main] INFO  - last name : 하
-[2020-10-26 15:36:27:2429][main] INFO  - first name : 재투
-[2020-10-26 15:36:27:2440][main] INFO  - last name : 최
-[2020-10-26 15:36:27:2440][main] INFO  - first name : 병운
-[2020-10-26 15:36:27:2452][main] INFO  - last name : 김
-[2020-10-26 15:36:27:2452][main] INFO  - first name : 수희
-[2020-10-26 15:36:28:2462][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2462][main] INFO  - first name : 민왕
-[2020-10-26 15:36:28:2471][main] INFO  - last name : 최
-[2020-10-26 15:36:28:2471][main] INFO  - first name : 철이
-[2020-10-26 15:36:28:2481][main] INFO  - last name : 조
-[2020-10-26 15:36:28:2481][main] INFO  - first name : 원수
-[2020-10-26 15:36:28:2493][main] INFO  - last name : 기
-[2020-10-26 15:36:28:2493][main] INFO  - first name : 원수
-[2020-10-26 15:36:28:2506][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2506][main] INFO  - first name : 정일
-[2020-10-26 15:36:28:2514][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2515][main] INFO  - first name : 갑주
-[2020-10-26 15:36:28:2522][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2522][main] INFO  - first name : 관주
-[2020-10-26 15:36:28:2530][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2530][main] INFO  - first name : 기보
-[2020-10-26 15:36:28:2540][main] INFO  - last name : 권
-[2020-10-26 15:36:28:2540][main] INFO  - first name : 혁차
-[2020-10-26 15:36:28:2568][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2568][main] INFO  - first name : 세로이
-[2020-10-26 15:36:28:2647][main] INFO  - last name : 가
-[2020-10-26 15:36:28:2647][main] INFO  - first name : 나다
-[2020-10-26 15:36:28:2653][main] INFO  - last name : 김
-[2020-10-26 15:36:28:2653][main] INFO  - first name : 관주
-[2020-10-26 15:36:28:2663][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:36:28:2663][main] INFO  - sync 종료 
-[2020-10-26 15:36:44:620][main] INFO  - Starting DemoApplication on luxurysooNB with PID 45928 (C:\git\DSAT_USERSYNC\bin\main started by luxurysoo in C:\git\DSAT_USERSYNC)
-[2020-10-26 15:36:44:623][main] INFO  - No active profile set, falling back to default profiles: default
-[2020-10-26 15:36:45:1894][main] INFO  - Started DemoApplication in 1.596 seconds (JVM running for 5.757)
-[2020-10-26 15:36:45:1895][main] INFO  - sync 시작 
-[2020-10-26 15:36:46:2069][main] INFO  - tmp_daishin 테이블 삭제 
-[2020-10-26 15:36:46:2334][main] INFO  - oracle 에서 정보 가져오기 
-[2020-10-26 15:36:46:2374][main] INFO  - tmp_daishin 테이블에 데이터 입력 (postgres) 
-[2020-10-26 15:36:46:2392][main] INFO  - tmp_daishin의 데이터로 그룹정보 조회 (view table)
-[2020-10-26 15:36:46:2402][main] INFO  - ir_user_group 삭제 
-[2020-10-26 15:36:46:2568][main] INFO  - ir_user_group 입력  
-[2020-10-26 15:36:46:2584][main] INFO  - ir_user 정보 입력 
-[2020-10-26 15:36:46:2584][main] INFO  - user 정보 입력  
-[2020-10-26 15:36:46:2585][main] INFO  - last name : 퇴
-[2020-10-26 15:36:46:2585][main] INFO  - first name : 직자
-[2020-10-26 15:36:46:2609][main] INFO  - last name : 홍
-[2020-10-26 15:36:46:2609][main] INFO  - first name : 길동
-[2020-10-26 15:36:46:2629][main] INFO  - last name : 이
-[2020-10-26 15:36:46:2629][main] INFO  - first name : 창현
-[2020-10-26 15:36:46:2642][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2642][main] INFO  - first name : 기동
-[2020-10-26 15:36:46:2656][main] INFO  - last name : 최
-[2020-10-26 15:36:46:2656][main] INFO  - first name : 민수
-[2020-10-26 15:36:46:2668][main] INFO  - last name : 하
-[2020-10-26 15:36:46:2668][main] INFO  - first name : 재투
-[2020-10-26 15:36:46:2680][main] INFO  - last name : 최
-[2020-10-26 15:36:46:2680][main] INFO  - first name : 병운
-[2020-10-26 15:36:46:2692][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2692][main] INFO  - first name : 수희
-[2020-10-26 15:36:46:2702][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2702][main] INFO  - first name : 민왕
-[2020-10-26 15:36:46:2712][main] INFO  - last name : 최
-[2020-10-26 15:36:46:2712][main] INFO  - first name : 철이
-[2020-10-26 15:36:46:2722][main] INFO  - last name : 조
-[2020-10-26 15:36:46:2722][main] INFO  - first name : 원수
-[2020-10-26 15:36:46:2732][main] INFO  - last name : 기
-[2020-10-26 15:36:46:2732][main] INFO  - first name : 원수
-[2020-10-26 15:36:46:2746][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2746][main] INFO  - first name : 정일
-[2020-10-26 15:36:46:2758][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2758][main] INFO  - first name : 갑주
-[2020-10-26 15:36:46:2771][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2771][main] INFO  - first name : 관주
-[2020-10-26 15:36:46:2782][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2782][main] INFO  - first name : 기보
-[2020-10-26 15:36:46:2793][main] INFO  - last name : 권
-[2020-10-26 15:36:46:2793][main] INFO  - first name : 혁차
-[2020-10-26 15:36:46:2802][main] INFO  - last name : 권
-[2020-10-26 15:36:46:2802][main] INFO  - first name : 혁
-[2020-10-26 15:36:46:2810][main] INFO  - last name : 이
-[2020-10-26 15:36:46:2810][main] INFO  - first name : 혁
-[2020-10-26 15:36:46:2819][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2819][main] INFO  - first name : 세로이
-[2020-10-26 15:36:46:2902][main] INFO  - last name : 가
-[2020-10-26 15:36:46:2902][main] INFO  - first name : 나다
-[2020-10-26 15:36:46:2909][main] INFO  - last name : 김
-[2020-10-26 15:36:46:2909][main] INFO  - first name : 관주
-[2020-10-26 15:36:46:2918][main] INFO  - 폰정보 업데이트  
-[2020-10-26 15:36:46:2918][main] INFO  - sync 종료 
+[2021-06-30 13:09:22:748][main] INFO  - Starting DemoApplication on luxurysooNB with PID 61004 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:09:22:752][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:09:23:2091][main] INFO  - Started DemoApplication in 1.754 seconds (JVM running for 6.83)
+[2021-06-30 13:09:23:2093][main] INFO  - sync 시작 
+[2021-06-30 13:09:23:2317][main] INFO  - ir_user 조회   test
+[2021-06-30 13:09:23:2318][main] INFO  - sync 종료 
+[2021-06-30 13:20:59:745][main] INFO  - Starting DemoApplication on luxurysooNB with PID 4028 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:20:59:752][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:21:00:2178][main] INFO  - Started DemoApplication in 1.812 seconds (JVM running for 6.24)
+[2021-06-30 13:21:34:730][main] INFO  - Starting DemoApplication on luxurysooNB with PID 59208 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:21:34:734][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:21:35:2059][main] INFO  - Started DemoApplication in 1.738 seconds (JVM running for 6.203)
+[2021-06-30 13:21:35:2061][main] INFO  - sync 시작 
+[2021-06-30 13:21:36:2289][main] INFO  - sync 종료 
+[2021-06-30 13:22:28:739][main] INFO  - Starting DemoApplication on luxurysooNB with PID 33176 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:22:28:743][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:22:29:2061][main] INFO  - Started DemoApplication in 1.742 seconds (JVM running for 6.268)
+[2021-06-30 13:22:29:2062][main] INFO  - sync 시작 
+[2021-06-30 13:22:30:2301][main] INFO  - sync 종료 
+[2021-06-30 13:26:16:787][main] INFO  - Starting DemoApplication on luxurysooNB with PID 27428 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:26:16:790][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:38:57:773][main] INFO  - Starting DemoApplication on luxurysooNB with PID 52000 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:38:57:777][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:41:17:781][main] INFO  - Starting DemoApplication on luxurysooNB with PID 60356 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:41:17:785][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:42:37:769][main] INFO  - Starting DemoApplication on luxurysooNB with PID 59396 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:42:37:773][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:42:39:2077][main] INFO  - Started DemoApplication in 1.729 seconds (JVM running for 6.852)
+[2021-06-30 13:42:39:2079][main] INFO  - sync 시작 
+[2021-06-30 13:42:39:2249][main] INFO  - sync 종료 
+[2021-06-30 13:43:01:767][main] INFO  - Starting DemoApplication on luxurysooNB with PID 59896 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:43:01:770][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:43:02:2255][main] INFO  - Started DemoApplication in 1.884 seconds (JVM running for 7.009)
+[2021-06-30 13:43:02:2256][main] INFO  - sync 시작 
+[2021-06-30 13:43:02:2426][main] INFO  - sync 종료 
+[2021-06-30 13:44:51:745][main] INFO  - Starting DemoApplication on luxurysooNB with PID 17168 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:44:51:748][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:44:52:2047][main] INFO  - Started DemoApplication in 1.687 seconds (JVM running for 6.902)
+[2021-06-30 13:44:52:2048][main] INFO  - sync 시작 
+[2021-06-30 13:44:52:2234][main] INFO  - sync 종료 
+[2021-06-30 13:47:01:722][main] INFO  - Starting DemoApplication on luxurysooNB with PID 4252 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:47:01:726][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:47:03:2036][main] INFO  - Started DemoApplication in 1.715 seconds (JVM running for 6.852)
+[2021-06-30 13:47:03:2036][main] INFO  - sync 시작 
+[2021-06-30 13:47:03:2187][main] INFO  - sync 종료 
+[2021-06-30 13:47:39:744][main] INFO  - Starting DemoApplication on luxurysooNB with PID 61944 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:47:39:747][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:49:51:807][main] INFO  - Starting DemoApplication on luxurysooNB with PID 56920 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:49:51:810][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:52:18:798][main] INFO  - Starting DemoApplication on luxurysooNB with PID 39492 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:52:18:802][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:52:20:2204][main] INFO  - Started DemoApplication in 1.883 seconds (JVM running for 7.006)
+[2021-06-30 13:52:20:2205][main] INFO  - sync 시작 
+[2021-06-30 13:52:20:2356][main] INFO  - sync 종료 
+[2021-06-30 13:53:25:766][main] INFO  - Starting DemoApplication on luxurysooNB with PID 47404 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:53:25:769][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:53:50:746][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63176 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:53:50:751][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:53:51:2003][main] INFO  - Started DemoApplication in 1.635 seconds (JVM running for 6.808)
+[2021-06-30 13:53:51:2004][main] INFO  - sync 시작 
+[2021-06-30 13:53:51:2172][main] INFO  - sync 종료 
+[2021-06-30 13:56:43:681][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63304 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 13:56:43:685][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 13:56:44:2012][main] INFO  - Started DemoApplication in 1.697 seconds (JVM running for 6.856)
+[2021-06-30 13:56:44:2013][main] INFO  - sync 시작 
+[2021-06-30 13:56:44:2167][main] INFO  - sync 종료 
+[2021-06-30 14:15:19:718][main] INFO  - Starting DemoApplication on luxurysooNB with PID 56296 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:15:19:721][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:15:21:1983][main] INFO  - Started DemoApplication in 1.656 seconds (JVM running for 6.8)
+[2021-06-30 14:15:21:1984][main] INFO  - sync 시작 
+[2021-06-30 14:15:21:2136][main] INFO  - sync 종료 
+[2021-06-30 14:17:16:742][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63796 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:17:16:746][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:17:17:2063][main] INFO  - Started DemoApplication in 1.693 seconds (JVM running for 6.809)
+[2021-06-30 14:17:17:2064][main] INFO  - sync 시작 
+[2021-06-30 14:17:17:2228][main] INFO  - sync 종료 
+[2021-06-30 14:19:44:739][main] INFO  - Starting DemoApplication on luxurysooNB with PID 32888 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:19:44:743][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:19:45:2102][main] INFO  - Started DemoApplication in 1.749 seconds (JVM running for 6.866)
+[2021-06-30 14:19:45:2102][main] INFO  - sync 시작 
+[2021-06-30 14:19:45:2260][main] INFO  - sync 종료 
+[2021-06-30 14:24:56:725][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63224 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:24:56:729][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:24:58:2081][main] INFO  - Started DemoApplication in 1.754 seconds (JVM running for 6.88)
+[2021-06-30 14:24:58:2082][main] INFO  - sync 시작 
+[2021-06-30 14:24:58:2235][main] INFO  - sync 종료 
+[2021-06-30 14:28:47:749][main] INFO  - Starting DemoApplication on luxurysooNB with PID 43896 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:28:47:753][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:28:48:1970][main] INFO  - Started DemoApplication in 1.604 seconds (JVM running for 6.783)
+[2021-06-30 14:28:48:1971][main] INFO  - sync 시작 
+[2021-06-30 14:28:48:2172][main] INFO  - sync 종료 
+[2021-06-30 14:31:55:791][main] INFO  - Starting DemoApplication on luxurysooNB with PID 29856 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:31:55:795][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:31:56:2106][main] INFO  - Started DemoApplication in 1.7 seconds (JVM running for 7.125)
+[2021-06-30 14:31:56:2107][main] INFO  - sync 시작 
+[2021-06-30 14:31:56:2286][main] INFO  - sync 종료 
+[2021-06-30 14:38:33:712][main] INFO  - Starting DemoApplication on luxurysooNB with PID 61520 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:38:33:715][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:38:34:1890][main] INFO  - Started DemoApplication in 1.575 seconds (JVM running for 6.636)
+[2021-06-30 14:38:34:1891][main] INFO  - sync 시작 
+[2021-06-30 14:38:35:2050][main] INFO  - sync 종료 
+[2021-06-30 14:47:29:884][main] INFO  - Starting DemoApplication on luxurysooNB with PID 41136 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:47:29:888][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:47:53:1260][main] INFO  - Starting DemoApplication on luxurysooNB with PID 46852 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:47:53:1265][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:47:55:3501][main] INFO  - Started DemoApplication in 3.016 seconds (JVM running for 10.88)
+[2021-06-30 14:47:55:3505][main] INFO  - sync 시작 
+[2021-06-30 14:47:55:3783][main] INFO  - sync 종료 
+[2021-06-30 14:50:31:852][main] INFO  - Starting DemoApplication on luxurysooNB with PID 14544 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:50:31:857][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:50:32:2246][main] INFO  - Started DemoApplication in 1.894 seconds (JVM running for 7.505)
+[2021-06-30 14:50:32:2247][main] INFO  - sync 시작 
+[2021-06-30 14:50:32:2426][main] INFO  - sync 종료 
+[2021-06-30 14:52:05:798][main] INFO  - Starting DemoApplication on luxurysooNB with PID 20056 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:52:05:802][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:52:06:2164][main] INFO  - Started DemoApplication in 1.799 seconds (JVM running for 7.487)
+[2021-06-30 14:52:06:2165][main] INFO  - sync 시작 
+[2021-06-30 14:52:06:2326][main] INFO  - sync 종료 
+[2021-06-30 14:56:19:768][main] INFO  - Starting DemoApplication on luxurysooNB with PID 61900 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:56:19:771][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:58:25:730][main] INFO  - Starting DemoApplication on luxurysooNB with PID 38908 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:58:25:734][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:58:26:1982][main] INFO  - Started DemoApplication in 1.625 seconds (JVM running for 6.797)
+[2021-06-30 14:58:26:1983][main] INFO  - sync 시작 
+[2021-06-30 14:58:26:1992][main] INFO  - sync 종료 
+[2021-06-30 14:59:06:836][main] INFO  - Starting DemoApplication on luxurysooNB with PID 45604 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 14:59:06:841][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 14:59:07:2052][main] INFO  - Started DemoApplication in 1.679 seconds (JVM running for 7.061)
+[2021-06-30 14:59:07:2052][main] INFO  - sync 시작 
+[2021-06-30 14:59:07:2060][main] INFO  - sync 종료 
+[2021-06-30 15:00:01:839][main] INFO  - Starting DemoApplication on luxurysooNB with PID 47208 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:00:01:845][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:00:02:2270][main] INFO  - Started DemoApplication in 1.909 seconds (JVM running for 7.322)
+[2021-06-30 15:00:02:2271][main] INFO  - sync 시작 
+[2021-06-30 15:00:02:2520][main] INFO  - sync 종료 
+[2021-06-30 15:01:43:725][main] INFO  - Starting DemoApplication on luxurysooNB with PID 7832 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:01:43:729][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:01:44:1909][main] INFO  - Started DemoApplication in 1.581 seconds (JVM running for 7.041)
+[2021-06-30 15:01:44:1909][main] INFO  - sync 시작 
+[2021-06-30 15:01:45:2159][main] INFO  - sync 종료 
+[2021-06-30 15:02:17:732][main] INFO  - Starting DemoApplication on luxurysooNB with PID 46580 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:02:17:736][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:03:25:706][main] INFO  - Starting DemoApplication on luxurysooNB with PID 62608 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:03:25:711][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:05:26:775][main] INFO  - Starting DemoApplication on luxurysooNB with PID 62516 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:05:26:779][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:05:28:1965][main] INFO  - Started DemoApplication in 1.594 seconds (JVM running for 6.938)
+[2021-06-30 15:05:28:1966][main] INFO  - sync 시작 
+[2021-06-30 15:05:28:2202][main] INFO  - sync 종료 
+[2021-06-30 15:06:52:768][main] INFO  - Starting DemoApplication on luxurysooNB with PID 64348 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:06:52:773][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:06:53:1966][main] INFO  - Started DemoApplication in 1.644 seconds (JVM running for 6.817)
+[2021-06-30 15:06:53:1968][main] INFO  - sync 시작 
+[2021-06-30 15:06:54:2184][main] INFO  - sync 종료 
+[2021-06-30 15:07:28:739][main] INFO  - Starting DemoApplication on luxurysooNB with PID 60976 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:07:28:744][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:07:30:1937][main] INFO  - Started DemoApplication in 1.578 seconds (JVM running for 6.756)
+[2021-06-30 15:07:30:1939][main] INFO  - sync 시작 
+[2021-06-30 15:07:30:2172][main] INFO  - sync 종료 
+[2021-06-30 15:08:19:757][main] INFO  - Starting DemoApplication on luxurysooNB with PID 50892 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:08:19:761][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:08:21:1936][main] INFO  - Started DemoApplication in 1.564 seconds (JVM running for 6.814)
+[2021-06-30 15:08:21:1936][main] INFO  - sync 시작 
+[2021-06-30 15:08:21:2163][main] INFO  - sync 종료 
+[2021-06-30 15:08:47:784][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63468 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:08:47:788][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:08:49:1981][main] INFO  - Started DemoApplication in 1.586 seconds (JVM running for 6.89)
+[2021-06-30 15:08:49:1982][main] INFO  - sync 시작 
+[2021-06-30 15:08:49:2316][main] INFO  - sync 종료 
+[2021-06-30 15:09:40:751][main] INFO  - Starting DemoApplication on luxurysooNB with PID 42596 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:09:40:754][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:10:19:744][main] INFO  - Starting DemoApplication on luxurysooNB with PID 64340 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:10:19:747][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:10:21:1972][main] INFO  - Started DemoApplication in 1.613 seconds (JVM running for 6.685)
+[2021-06-30 15:10:21:1973][main] INFO  - sync 시작 
+[2021-06-30 15:10:21:2199][main] INFO  - sync 종료 
+[2021-06-30 15:10:46:824][main] INFO  - Starting DemoApplication on luxurysooNB with PID 22960 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:10:46:828][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:10:47:2033][main] INFO  - Started DemoApplication in 1.693 seconds (JVM running for 6.951)
+[2021-06-30 15:10:47:2034][main] INFO  - sync 시작 
+[2021-06-30 15:10:48:2291][main] INFO  - sync 종료 
+[2021-06-30 15:11:28:752][main] INFO  - Starting DemoApplication on luxurysooNB with PID 40556 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:11:28:754][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:11:29:2047][main] INFO  - Started DemoApplication in 1.704 seconds (JVM running for 7.062)
+[2021-06-30 15:11:29:2049][main] INFO  - sync 시작 
+[2021-06-30 15:11:29:2290][main] INFO  - sync 종료 
+[2021-06-30 15:12:49:706][main] INFO  - Starting DemoApplication on luxurysooNB with PID 52448 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:12:49:709][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:12:50:2008][main] INFO  - Started DemoApplication in 1.669 seconds (JVM running for 6.795)
+[2021-06-30 15:12:50:2009][main] INFO  - sync 시작 
+[2021-06-30 15:12:50:2244][main] INFO  - sync 종료 
+[2021-06-30 15:13:36:727][main] INFO  - Starting DemoApplication on luxurysooNB with PID 41588 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:13:36:730][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:14:02:729][main] INFO  - Starting DemoApplication on luxurysooNB with PID 64368 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:14:02:733][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:14:49:706][main] INFO  - Starting DemoApplication on luxurysooNB with PID 61336 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:14:49:711][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:16:08:712][main] INFO  - Starting DemoApplication on luxurysooNB with PID 62480 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:16:08:715][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:17:20:772][main] INFO  - Starting DemoApplication on luxurysooNB with PID 61324 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:17:20:775][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:19:07:743][main] INFO  - Starting DemoApplication on luxurysooNB with PID 21604 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:19:07:747][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:20:33:747][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63472 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:20:33:752][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:21:56:766][main] INFO  - Starting DemoApplication on luxurysooNB with PID 6312 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:21:56:771][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:21:57:2102][main] INFO  - Started DemoApplication in 1.762 seconds (JVM running for 6.9)
+[2021-06-30 15:21:57:2103][main] INFO  - sync 시작 
+[2021-06-30 15:21:58:2322][main] INFO  - sync 종료 
+[2021-06-30 15:22:44:765][main] INFO  - Starting DemoApplication on luxurysooNB with PID 43956 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:22:44:769][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:22:45:2073][main] INFO  - Started DemoApplication in 1.747 seconds (JVM running for 6.769)
+[2021-06-30 15:22:45:2074][main] INFO  - sync 시작 
+[2021-06-30 15:22:45:2286][main] INFO  - sync 종료 
+[2021-06-30 15:24:27:746][main] INFO  - Starting DemoApplication on luxurysooNB with PID 45928 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:24:27:751][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:24:29:2067][main] INFO  - Started DemoApplication in 1.708 seconds (JVM running for 6.88)
+[2021-06-30 15:24:29:2069][main] INFO  - sync 시작 
+[2021-06-30 15:24:29:2395][main] INFO  - sync 종료 
+[2021-06-30 15:26:17:716][main] INFO  - Starting DemoApplication on luxurysooNB with PID 41036 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:26:17:719][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:26:18:2022][main] INFO  - Started DemoApplication in 1.674 seconds (JVM running for 6.767)
+[2021-06-30 15:26:18:2024][main] INFO  - sync 시작 
+[2021-06-30 15:26:18:2222][main] INFO  - sync 종료 
+[2021-06-30 15:27:14:738][main] INFO  - Starting DemoApplication on luxurysooNB with PID 55996 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:27:14:741][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:27:16:2078][main] INFO  - Started DemoApplication in 1.718 seconds (JVM running for 6.721)
+[2021-06-30 15:27:16:2079][main] INFO  - sync 시작 
+[2021-06-30 15:27:16:2272][main] INFO  - sync 종료 
+[2021-06-30 15:28:15:747][main] INFO  - Starting DemoApplication on luxurysooNB with PID 26964 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:28:15:751][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:28:17:2063][main] INFO  - Started DemoApplication in 1.697 seconds (JVM running for 6.741)
+[2021-06-30 15:28:17:2064][main] INFO  - sync 시작 
+[2021-06-30 15:28:17:2309][main] INFO  - sync 종료 
+[2021-06-30 15:29:09:707][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63384 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:29:09:712][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:29:10:2003][main] INFO  - Started DemoApplication in 1.666 seconds (JVM running for 6.745)
+[2021-06-30 15:29:10:2004][main] INFO  - sync 시작 
+[2021-06-30 15:29:10:2171][main] INFO  - sync 종료 
+[2021-06-30 15:30:31:744][main] INFO  - Starting DemoApplication on luxurysooNB with PID 56356 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:30:31:749][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:30:32:2048][main] INFO  - Started DemoApplication in 1.705 seconds (JVM running for 6.773)
+[2021-06-30 15:30:32:2049][main] INFO  - sync 시작 
+[2021-06-30 15:30:32:2272][main] INFO  - sync 종료 
+[2021-06-30 15:33:49:821][main] INFO  - Starting DemoApplication on luxurysooNB with PID 53660 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:33:49:826][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:33:50:2155][main] INFO  - Started DemoApplication in 1.756 seconds (JVM running for 6.948)
+[2021-06-30 15:33:50:2156][main] INFO  - sync 시작 
+[2021-06-30 15:33:51:2374][main] INFO  - sync 종료 
+[2021-06-30 15:34:43:744][main] INFO  - Starting DemoApplication on luxurysooNB with PID 21656 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:34:43:749][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:34:45:2024][main] INFO  - Started DemoApplication in 1.673 seconds (JVM running for 6.891)
+[2021-06-30 15:34:45:2026][main] INFO  - sync 시작 
+[2021-06-30 15:34:45:2242][main] INFO  - sync 종료 
+[2021-06-30 15:35:53:763][main] INFO  - Starting DemoApplication on luxurysooNB with PID 63028 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:35:53:767][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:35:54:2062][main] INFO  - Started DemoApplication in 1.695 seconds (JVM running for 6.917)
+[2021-06-30 15:35:54:2063][main] INFO  - sync 시작 
+[2021-06-30 15:35:54:2377][main] INFO  - sync 종료 
+[2021-06-30 15:36:25:762][main] INFO  - Starting DemoApplication on luxurysooNB with PID 43612 (C:\git\CallCheck_Y\bin\main started by luxurysoo in C:\git\CallCheck_Y)
+[2021-06-30 15:36:25:765][main] INFO  - No active profile set, falling back to default profiles: default
+[2021-06-30 15:36:27:2052][main] INFO  - Started DemoApplication in 1.685 seconds (JVM running for 6.793)
+[2021-06-30 15:36:27:2053][main] INFO  - sync 시작 
+[2021-06-30 15:36:27:2366][main] INFO  - sync 종료 

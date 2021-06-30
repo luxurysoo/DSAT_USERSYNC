@@ -34,8 +34,8 @@ import org.springframework.transaction.PlatformTransactionManager;
  */
 @Configuration
 @PropertySource({"classpath:/db.properties"})
-@MapperScan(value="com.innoinc.dao.postgres", sqlSessionFactoryRef="postgresSqlSessionFactory")
-public class PostgresDatabaseConfig {
+@MapperScan(value="com.innoinc.dao.postgres181", sqlSessionFactoryRef="postgres181SqlSessionFactory")
+public class Postgres181DatabaseConfig {
     
     /**
      * DataSource 설정 
@@ -44,9 +44,9 @@ public class PostgresDatabaseConfig {
      * 
      * ConfigurationProperties db.properties 속성을 매핑한다.
      */
-	@Bean(name = "postgresDataSource")
- 
-	@ConfigurationProperties(prefix = "spring.postgres.datasource")
+	@Bean(name = "postgres181DataSource")
+	@Primary
+	@ConfigurationProperties(prefix = "spring.postgres181.datasource")
     public DataSource postgresDataSource() {
         return DataSourceBuilder.create().build();
     }
@@ -59,13 +59,13 @@ public class PostgresDatabaseConfig {
      * setTypeAliasePackage model의 경로 지정
      * setMapperLocations Mapper.xml의 경로 지정
      */
-    @Bean(name = "postgresSqlSessionFactory")
-  
-    public SqlSessionFactory postgresSqlSessionFactory(@Qualifier("postgresDataSource") DataSource postgresDataSource, ApplicationContext applicationContext) throws Exception {
+    @Bean(name = "postgres181SqlSessionFactory")
+    @Primary
+    public SqlSessionFactory postgres181SqlSessionFactory(@Qualifier("postgres181DataSource") DataSource postgresDataSource, ApplicationContext applicationContext) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(postgresDataSource);
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.innoinc.model.postgres");
-        sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:mybatis/postgres/**/*.xml"));
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.innoinc.model.postgres181");
+        sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:mybatis/postgres181/**/*.xml"));
         return sqlSessionFactoryBean.getObject();
     }
 
@@ -77,11 +77,11 @@ public class PostgresDatabaseConfig {
      * @return
      * @throws Exception
      */
-    @Bean(name = "postgresSqlSessionTemplate")
+    @Bean(name = "postgres181SqlSessionTemplate")
+    @Primary
+    public SqlSessionTemplate postgresSqlSessionTemplate(SqlSessionFactory postgres181SqlSessionFactory) throws Exception {
  
-    public SqlSessionTemplate postgresSqlSessionTemplate(SqlSessionFactory postgresSqlSessionFactory) throws Exception {
- 
-        return new SqlSessionTemplate(postgresSqlSessionFactory);
+        return new SqlSessionTemplate(postgres181SqlSessionFactory);
     }
     
 
@@ -91,7 +91,7 @@ public class PostgresDatabaseConfig {
      * @param postgresDataSource
      * @return
      */
-    @Bean(name = "postgresTxManager")
+    @Bean(name = "postgres181TxManager")
     public PlatformTransactionManager postgresTxManager(DataSource postgresDataSource) {
         return new DataSourceTransactionManager(postgresDataSource);
     }

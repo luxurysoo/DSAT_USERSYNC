@@ -31,8 +31,8 @@ public class ChainedTxConfig {
     @Bean
     @Primary
     public PlatformTransactionManager transactionManager(
-    		PlatformTransactionManager postgresTxManager, PlatformTransactionManager oracleTxManager) {
+    		 PlatformTransactionManager postgres181TxManager ,PlatformTransactionManager postgresTxManager) {
         return new ChainedTransactionManager(
-        		postgresTxManager, oracleTxManager);
+        		postgres181TxManager,postgresTxManager);
     }
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.innoinc.dao.postgres181.ir.IrUserMapper181">
+
+    <select id="selectAll" resultType="iruser181">
+        SELECT *
+        FROM ir_user
+    </select>
+    
+    <select id="selectIruserByUserid" parameterType="String" resultType="int">
+        SELECT count(user_id) as count
+        FROM ir_user
+        WHERE user_id = #{userid}
+    </select>
+
+	 <insert id="insertUserList" parameterType="java.util.List">
+	    INSERT INTO ir_user (
+	        user_id,  user_name, dept_code, dept_name, upper_dept, upper_name,group_path, group_id,
+	         phone_no, title_code, compliance, retire_yn, passwd, auth_level, job_auth_code 
+	    )
+	    VALUES
+		    <foreach collection="list" item="item" separator="," >
+		        ('${item.emp_no}','${item.emp_name}', '${item.dept_code}', '${item.dept_name}', '${item.upper_dept}','${item.upper_name}','${item.group_path}','${item.group_id}',
+		        '${item.office_phone}','${item.title_code}','${item.compliance}','${item.retire_yn}', '${item.user_pass_sso}' ,0 , '${item.first_name}','${item.last_name}' ,'${item.job_auth_code}'  )
+		    </foreach>
+	</insert>
+	
+	<insert id="insertUserBean" parameterType="iruser181" >
+		INSERT INTO ir_user (
+	        user_id,  user_name, dept_code, dept_name, upper_dept, upper_name,group_path, group_id,
+	         phone_no, title_code, compliance, retire_yn, passwd, auth_level, first_name, last_name , job_auth_code
+	    )
+	    VALUES 
+		 ('${emp_no}','${emp_name}', '${dept_code}', '${dept_name}', '${upper_dept}','${upper_name}','${group_path}','${group_id}',
+		        '${office_phone}','${title_code}','${compliance}','${retire_yn}', '${user_pass_sso}' ,0 , '${first_name}','${last_name}' , '${job_auth_code}'  )
+	</insert>
+	
+	<update id="updateUserBean" parameterType="iruser181">
+		update ir_user set dept_code='${dept_code}', dept_name='${dept_name}', upper_dept='${upper_dept}', upper_name='${upper_name}',
+				group_path='${group_path}',group_id='${group_id}' ,phone_no='${office_phone}',title_code='${title_code}',
+				compliance='${compliance}', retire_yn='${retire_yn}', passwd='${user_pass_sso}', auth_level='${auth_level}' , user_name='${emp_name}' , first_name='${first_name}',last_name='${last_name}' , job_auth_code='${job_auth_code}' 
+		where user_id='${emp_no }' 
+	</update>
+	
+	<delete id="deleteIrUser" >
+    	DELETE from ir_user
+    </delete>
+    
+
+
+</mapper>
